@@ -1,0 +1,876 @@
+<title>+300 Dinámicas para Adultos Mayores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --background:#FFFDF5;
+  --foreground:#1E293B;
+  --muted:#F1F5F9;
+  --muted-fg:#64748B;
+  --accent:#8B5CF6;
+  --accent-fg:#FFFFFF;
+  --secondary:#F472B6;
+  --tertiary:#FBBF24;
+  --quaternary:#34D399;
+  --vivid-green:#22C55E;
+  --brand-blue:#2563EB;
+  --border:#E2E8F0;
+  --card:#FFFFFF;
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-full:9999px;
+  --bw:2px;
+  --pop:4px 4px 0px 0px var(--foreground);
+  --pop-hover:6px 6px 0px 0px var(--foreground);
+  --pop-active:2px 2px 0px 0px var(--foreground);
+  --bounce:cubic-bezier(0.34,1.56,0.64,1);
+  --container:1152px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--background);
+  color:var(--foreground);
+  font-family:"Plus Jakarta Sans",system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+h1,h2,h3,h4,.font-head{font-family:"Outfit",system-ui,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-0.02em}
+
+/* ============ LAYOUT ============ */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px;position:relative;z-index:2}
+section{padding:88px 0;position:relative;overflow:hidden}
+@media(max-width:768px){section{padding:56px 0}}
+
+/* ============ DECOR ============ */
+.dots{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle, rgba(30,41,59,.13) 1.5px, transparent 1.6px);
+  background-size:22px 22px;
+  z-index:0;
+}
+.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+.confetti{position:absolute;pointer-events:none;z-index:1;opacity:.9}
+@media(max-width:768px){.confetti,.blob-hide{display:none}}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:14px;
+  font-family:"Outfit",sans-serif;font-weight:800;font-size:1.0625rem;
+  text-transform:uppercase;letter-spacing:.01em;text-decoration:none;
+  padding:16px 26px;min-height:56px;
+  border:var(--bw) solid var(--foreground);border-radius:var(--r-full);
+  background:var(--accent);color:#fff;cursor:pointer;
+  box-shadow:var(--pop);
+  transition:all .3s var(--bounce);
+  text-align:center;
+}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:var(--pop-hover)}
+.btn:active{transform:translate(2px,2px);box-shadow:var(--pop-active)}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 4px var(--tertiary),var(--pop)}
+.btn .arrow{
+  width:32px;height:32px;flex:0 0 32px;border-radius:50%;background:#fff;
+  display:grid;place-items:center;color:var(--foreground);
+}
+.btn-green{background:var(--quaternary);color:var(--foreground)}
+.btn-block{display:flex;width:100%}
+@media(max-width:520px){.btn{font-size:.9375rem;padding:14px 18px;gap:10px}}
+
+/* ============ CARDS ============ */
+.card{
+  background:var(--card);
+  border:var(--bw) solid var(--foreground);
+  border-radius:var(--r-lg);
+  padding:28px;
+  box-shadow:8px 8px 0px var(--border);
+  transition:all .3s var(--bounce);
+  position:relative;
+}
+.card:hover{transform:rotate(-1deg) scale(1.02);box-shadow:8px 8px 0px var(--secondary)}
+@media(max-width:768px){
+  .card{box-shadow:4px 4px 0px var(--border);padding:22px}
+  .card:hover{transform:none}
+  .btn{box-shadow:2px 2px 0px var(--foreground)}
+}
+
+/* ============ TOP BAR ============ */
+.topbar{
+  background:var(--secondary);
+  border-bottom:var(--bw) solid var(--foreground);
+  color:var(--foreground);
+  font-family:"Outfit",sans-serif;font-weight:800;
+  text-align:center;padding:11px 16px;font-size:.95rem;
+  position:sticky;top:0;z-index:60;
+  text-transform:uppercase;letter-spacing:.02em;
+}
+.topbar .pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--foreground);margin-right:8px;animation:pulse 1.4s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+
+/* ============ HERO ============ */
+.hero{padding:64px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1fr;max-width:640px;margin:0 auto}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--tertiary);border:var(--bw) solid var(--foreground);
+  border-radius:var(--r-full);padding:7px 16px;
+  font-family:"Outfit",sans-serif;font-weight:800;font-size:.8125rem;
+  text-transform:uppercase;letter-spacing:.04em;
+  box-shadow:3px 3px 0 var(--foreground);
+}
+.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin:22px 0 20px}
+.hero h1 .hl{
+  background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);
+  padding:0 4px;
+}
+.hero p.lead{font-size:1.0625rem;color:#334155;max-width:56ch}
+.hero-list{list-style:none;margin:26px 0 30px;display:grid;gap:12px}
+.hero-list li{display:flex;align-items:center;gap:12px;font-weight:500}
+.tick{
+  width:28px;height:28px;flex:0 0 28px;border-radius:50%;
+  background:var(--quaternary);border:var(--bw) solid var(--foreground);
+  display:grid;place-items:center;color:var(--foreground);
+  font-size:14px;line-height:1;
+}
+.gift-ico{
+  width:28px;height:28px;flex:0 0 28px;border-radius:50%;
+  background:var(--tertiary);border:var(--bw) solid var(--foreground);
+  display:grid;place-items:center;color:var(--foreground);
+  font-size:14px;line-height:1;
+}
+@media(max-width:900px){
+  .hero-grid{text-align:center}
+  .hero p.lead{margin:0 auto}
+  .real-mockup-wrap{margin-left:auto;margin-right:auto}
+  .hero-list{justify-items:start;max-width:380px;margin-left:auto;margin-right:auto}
+  .hero .btn{width:100%}
+}
+
+/* ============ REAL-SIZE IMAGE (no bg / no shadow) ============ */
+.real-mockup-wrap{display:flex;align-items:center;justify-content:center;margin:28px 0}
+.real-mockup{display:block;width:100%;height:auto;object-fit:contain}
+
+/* framed variant (section "¿Qué vas a recibir?") */
+.framed-mockup{
+  background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
+  padding:22px;box-shadow:8px 8px 0 var(--border);
+  display:flex;align-items:center;justify-content:center;
+}
+@media(max-width:600px){.framed-mockup{padding:16px;box-shadow:4px 4px 0 var(--border)}}
+
+.mockup-block{text-align:center}
+
+/* ============ SECTION HEADINGS ============ */
+.sec-head{text-align:center;max-width:820px;margin:0 auto 52px}
+.sec-head h2{font-size:clamp(1.75rem,3.6vw,2.75rem)}
+.sec-head p{margin-top:16px;color:#475569;font-size:1.0625rem}
+.eyebrow{
+  display:inline-block;font-family:"Outfit",sans-serif;font-weight:800;
+  font-size:.8125rem;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--accent);margin-bottom:12px;
+}
+
+/* ============ CATEGORÍAS LIST (S2) ============ */
+.deliv{display:grid;gap:20px}
+.deliv-item{
+  display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;
+  background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
+  padding:24px;box-shadow:6px 6px 0 var(--border);
+  transition:all .3s var(--bounce);
+}
+.deliv-item:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--tertiary)}
+.deliv-num{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  border:var(--bw) solid var(--foreground);
+  font-family:"Outfit",sans-serif;font-weight:800;font-size:1.25rem;color:#fff;
+}
+.c1{background:var(--accent)} .c2{background:var(--secondary)} .c3{background:var(--tertiary);color:var(--foreground)!important} .c4{background:var(--quaternary);color:var(--foreground)!important} .c5{background:var(--accent)}
+.c6{background:var(--secondary)} .c7{background:var(--tertiary);color:var(--foreground)!important} .c8{background:var(--quaternary);color:var(--foreground)!important} .c9{background:var(--accent)} .c10{background:var(--secondary)} .c11{background:var(--tertiary);color:var(--foreground)!important}
+.deliv-item h3{font-size:1.1875rem;margin-bottom:6px}
+.deliv-item p{color:#475569;font-size:.9688rem}
+@media(max-width:600px){.deliv-item{padding:20px;gap:14px}.deliv-num{width:42px;height:42px;font-size:1rem}}
+
+.highlight-note{text-align:center;font-size:1.125rem;font-weight:700;max-width:720px;margin:40px auto 0;font-family:"Outfit",sans-serif}
+.highlight-note .hl{background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);padding:0 4px}
+
+/* ============ CARROUSEL VITRINE ============ */
+.marquee{
+  position:relative;overflow:hidden;padding:10px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+}
+.marquee-track{display:flex;gap:16px;width:max-content;animation:scroll 24s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.slide{
+  flex:0 0 auto;height:380px;
+  border-radius:var(--r-md);
+  overflow:hidden;
+  display:flex;align-items:center;
+}
+.slide img{height:100%;width:auto;display:block;object-fit:contain}
+@media(max-width:600px){.slide{height:270px}.marquee-track{animation-duration:18s}}
+
+.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:26px}
+.carousel-dots .dot{
+  --c:var(--accent);
+  width:10px;height:10px;border-radius:50%;
+  background:var(--border);border:var(--bw) solid var(--foreground);
+  animation:dotPulse 20s ease-in-out infinite;
+}
+@keyframes dotPulse{
+  0%,14%{background:var(--c);transform:scale(1.35)}
+  20%,100%{background:var(--border);transform:scale(1)}
+}
+
+/* ============ BONUS (S5) ============ */
+.bonus-banner{
+  background:var(--brand-blue);color:#fff;border-radius:var(--r-lg);
+  border:var(--bw) solid var(--foreground);
+  padding:26px 24px;text-align:center;margin-bottom:44px;
+  box-shadow:8px 8px 0 var(--secondary);
+}
+.bonus-banner .dates{color:var(--tertiary)}
+.bonus-banner h2{font-size:clamp(1.35rem,3vw,2rem);text-transform:uppercase}
+.bonus-banner h2 span{color:var(--tertiary)}
+.bonus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+@media(max-width:820px){.bonus-grid{grid-template-columns:1fr}}
+.bonus-card{position:relative;text-align:center}
+.bonus-tag{
+  position:absolute;top:-16px;right:-10px;
+  background:var(--secondary);color:var(--foreground);
+  border:var(--bw) solid var(--foreground);border-radius:var(--r-full);
+  padding:6px 14px;font-family:"Outfit",sans-serif;font-weight:800;font-size:.75rem;
+  text-transform:uppercase;letter-spacing:.06em;transform:rotate(8deg);
+  box-shadow:3px 3px 0 var(--foreground);z-index:3;
+}
+.bonus-card h3{font-size:1.125rem;margin-bottom:18px;min-height:2.6em;display:flex;align-items:center;justify-content:center}
+.bonus-img-wrap{margin:4px 0 8px;display:flex;align-items:center;justify-content:center}
+.bonus-img-wrap img{display:block;width:100%;height:auto;object-fit:contain}
+.price-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px}
+.price-old{color:var(--muted-fg);text-decoration:line-through;font-weight:700}
+.price-free{
+  background:var(--quaternary);border:var(--bw) solid var(--foreground);
+  border-radius:var(--r-full);padding:6px 20px;
+  font-family:"Outfit",sans-serif;font-weight:800;text-transform:uppercase;
+  box-shadow:3px 3px 0 var(--foreground);
+}
+
+/* ============ WHY / FOR WHOM (S7) ============ */
+.panel-single{max-width:820px;margin:0 auto}
+.panel{
+  background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
+  padding:34px;box-shadow:8px 8px 0 var(--border);
+}
+.panel h3{font-size:1.375rem;margin-bottom:22px;line-height:1.25;text-align:center}
+.check-list{list-style:none;display:grid;gap:18px}
+.check-list li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;font-size:.9688rem;color:#334155}
+.check-list .tick{margin-top:2px}
+.check-list strong{color:var(--foreground);font-family:"Outfit",sans-serif;font-weight:700;font-size:1rem;display:block;margin-bottom:3px}
+@media(max-width:600px){.panel{padding:24px;box-shadow:4px 4px 0 var(--border)}}
+
+/* ============ OFFER (S8) ============ */
+#oferta{background:var(--foreground);color:#fff}
+#oferta .dots{background-image:radial-gradient(circle, rgba(255,255,255,.16) 1.5px, transparent 1.6px)}
+#oferta .sec-head h2{color:#fff}
+#oferta .eyebrow{color:var(--tertiary)}
+.offer-card{
+  max-width:640px;margin:0 auto;background:#fff;color:var(--foreground);
+  border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
+  padding:36px;box-shadow:12px 12px 0 var(--secondary);position:relative;
+}
+.star-badge{
+  position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-4deg);
+  background:var(--tertiary);border:var(--bw) solid var(--foreground);
+  border-radius:var(--r-full);padding:8px 22px;white-space:nowrap;
+  font-family:"Outfit",sans-serif;font-weight:800;font-size:.875rem;
+  text-transform:uppercase;letter-spacing:.05em;box-shadow:4px 4px 0 var(--foreground);
+}
+.offer-card h3{font-size:1.5rem;text-align:center;margin:18px 0 24px;line-height:1.25}
+.offer-includes{list-style:none;display:grid;gap:13px;margin:26px 0}
+.offer-includes li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;font-size:.9688rem}
+.divider-dash{border:0;border-top:2px dashed var(--border);margin:26px 0}
+.price-box{text-align:center}
+.price-from{color:var(--muted-fg);text-decoration:line-through;font-weight:700;font-size:1.0625rem}
+.price-today{
+  display:inline-block;font-family:"Outfit",sans-serif;font-weight:800;
+  font-size:.8125rem;text-transform:uppercase;letter-spacing:.1em;
+  background:var(--secondary);border:var(--bw) solid var(--foreground);
+  border-radius:var(--r-full);padding:5px 16px;margin:12px 0 6px;
+  box-shadow:3px 3px 0 var(--foreground);
+}
+.price-main{font-family:"Outfit",sans-serif;font-weight:800;font-size:clamp(3rem,9vw,4.25rem);line-height:1;color:var(--accent)}
+.price-inst{font-weight:700;margin-top:8px}
+.price-note{color:var(--muted-fg);font-size:.875rem;margin-top:6px}
+.secure{
+  display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;
+  font-family:"Outfit",sans-serif;font-weight:700;font-size:.8125rem;
+  text-transform:uppercase;letter-spacing:.06em;color:var(--muted-fg);
+}
+@media(max-width:600px){.offer-card{padding:26px 20px;box-shadow:6px 6px 0 var(--secondary)}}
+
+/* ============ GUARANTEE (S9) ============ */
+.guarantee{
+  max-width:820px;margin:0 auto;text-align:center;
+  background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
+  padding:44px 34px;box-shadow:10px 10px 0 var(--quaternary);
+}
+.seal{
+  width:110px;height:110px;margin:0 auto 22px;border-radius:50%;
+  background:var(--quaternary);border:3px solid var(--foreground);
+  display:grid;place-items:center;box-shadow:5px 5px 0 var(--foreground);
+}
+.guarantee h2{font-size:clamp(1.5rem,3.4vw,2.25rem);margin-bottom:16px}
+.guarantee p{color:#475569;max-width:62ch;margin:0 auto 28px}
+@media(max-width:600px){.guarantee{padding:30px 20px;box-shadow:5px 5px 0 var(--quaternary)}}
+
+/* ============ FAQ (S10) ============ */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:16px}
+.faq-item{
+  background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-md);
+  box-shadow:5px 5px 0 var(--border);overflow:hidden;
+}
+.faq-item[open]{box-shadow:5px 5px 0 var(--tertiary)}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:22px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  font-family:"Outfit",sans-serif;font-weight:700;font-size:1.0625rem;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-plus{
+  width:32px;height:32px;flex:0 0 32px;border-radius:50%;
+  background:var(--accent);border:var(--bw) solid var(--foreground);
+  display:grid;place-items:center;color:#fff;transition:transform .3s var(--bounce);
+}
+.faq-item[open] .faq-plus{transform:rotate(45deg);background:var(--secondary)}
+.faq-body{padding:0 24px 24px;color:#475569;font-size:.9688rem}
+.faq-body p+p{margin-top:10px}
+@media(max-width:600px){.faq-item summary{padding:18px;font-size:.9688rem}.faq-body{padding:0 18px 18px}}
+
+/* ============ FOOTER ============ */
+footer{
+  background:var(--foreground);color:#94A3B8;text-align:center;
+  padding:44px 20px;font-size:.8125rem;border-top:var(--bw) solid var(--foreground);
+}
+footer strong{color:#fff;font-family:"Outfit",sans-serif;display:block;margin-bottom:10px;font-size:1rem}
+footer p{max-width:70ch;margin:0 auto 8px}
+
+/* ============ ENTRANCE ANIMATION ============ */
+.reveal{opacity:0;transform:scale(.94) translateY(18px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .5s ease,transform .6s var(--bounce)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+  .marquee-track{animation:none}
+}
+</style>
+
+<!-- ═══════════ TOP BAR ═══════════ -->
+<div class="topbar"><span class="pulse"></span>¡Descuento solo HOY en esta página!</div>
+
+<!-- ═══════════ SECCIÓN 1 · HERO ═══════════ -->
+<section class="hero">
+  <div class="blob blob-hide" style="width:520px;height:520px;background:var(--tertiary);opacity:.5;top:-90px;left:-160px"></div>
+  <svg class="confetti" style="top:70px;right:12%;" width="46" height="46" viewBox="0 0 46 46"><polygon points="23,3 43,41 3,41" fill="#F472B6" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round"/></svg>
+  <svg class="confetti" style="bottom:60px;left:6%;" width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="19" r="16" fill="#34D399" stroke="#1E293B" stroke-width="2.5"/></svg>
+  <svg class="confetti" style="top:44%;right:3%;" width="42" height="42" viewBox="0 0 42 42"><rect x="4" y="4" width="34" height="34" rx="8" fill="#8B5CF6" stroke="#1E293B" stroke-width="2.5" transform="rotate(15 21 21)"/></svg>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6z"/></svg>
+          FISIOTERAPEUTAS · T.O. · EDUCADORES FÍSICOS · CUIDADORES
+        </span>
+
+        <h1><span class="hl">+300 dinámicas</span> para adultos mayores, listas para aplicar.</h1>
+
+        <p class="lead">Organizadas en 12 categorías, 3 niveles de dificultad y por objetivo, todas con explicación paso a paso e ilustraciones. Tu sesión lista en menos de 1 minuto.</p>
+
+        <div class="real-mockup-wrap" style="max-width:420px">
+          <img src="images/mockup29set.webp" alt="+300 dinámicas para adultos mayores" class="real-mockup" width="1100" height="825" loading="eager">
+        </div>
+
+        <ul class="hero-list">
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acceso de por vida</li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Entrega inmediata por correo y WhatsApp</li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Garantía incondicional de 7 días</li>
+        </ul>
+
+        <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn">
+          Quiero recibir los materiales
+          <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 2 · CATEGORÍAS ═══════════ -->
+<section style="background:var(--muted)">
+  <div class="dots"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Contenido completo</span>
+      <h2>Todo lo que tu adulto mayor necesita trabajar, en un solo lugar</h2>
+      <p>12 categorías de dinámicas, cada una pensada para un objetivo específico.</p>
+    </div>
+
+    <div class="deliv">
+      <div class="deliv-item reveal">
+        <div class="deliv-num c1">1</div>
+        <div>
+          <h3>🛡️ Dinámicas para Prevenir Caídas y Mejorar el Equilibrio</h3>
+          <p>Pensadas para que tu adulto mayor gane firmeza en cada paso, se mantenga estable al caminar, al girar y al levantarse, y vuelva a moverse con la seguridad de quien confía en su propio cuerpo. Un equilibrio real, trabajado de forma progresiva, para que cada paso sea más firme que el anterior.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c2">2</div>
+        <div>
+          <h3>🧠 Dinámicas para Estimular la Memoria</h3>
+          <p>Creadas para mantener la mente activa, despierta y ágil. Para que tu adulto mayor recuerde con más facilidad nombres, rostros, fechas y momentos, conserve su historia y siga siendo esa persona lúcida que su familia conoce y ama.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c3">3</div>
+        <div>
+          <h3>🚶 Dinámicas para la Autonomía en el Día a Día</h3>
+          <p>Enfocadas en los movimientos que el adulto mayor necesita todos los días: levantarse, sentarse, vestirse, alcanzar un objeto, subir un escalón. Para que pueda hacerlo por sí mismo, sin depender de nadie, con dignidad e independencia.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c4">4</div>
+        <div>
+          <h3>💪 Dinámicas para Ganar Fuerza y Frenar la Pérdida Muscular</h3>
+          <p>Para que tu adulto mayor recupere y mantenga la fuerza en piernas, brazos y tronco. Músculos que lo sostienen, lo protegen y le permiten seguir haciendo todo lo que quiere hacer, con más energía y menos cansancio.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c5">5</div>
+        <div>
+          <h3>🤹 Dinámicas de Coordinación Motora</h3>
+          <p>Ponen cuerpo y mente a trabajar en perfecta sintonía. Movimientos más precisos, reacciones más rápidas y un control del cuerpo que se nota en cada gesto: al caminar, al tomar un objeto, al moverse en su día a día.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c6">6</div>
+        <div>
+          <h3>♿ Dinámicas en Silla para Movilidad Reducida</h3>
+          <p>Diseñadas para adultos mayores que no pueden estar de pie o que usan silla de ruedas. Cada movimiento está pensado para hacerse sentado y con total seguridad, para que ellos también se muevan, se activen y sientan que su cuerpo sigue respondiendo.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c7">7</div>
+        <div>
+          <h3>✋ Dinámicas de Motricidad Fina</h3>
+          <p>Para devolverle precisión y control a las manos. Para que tu adulto mayor pueda abotonarse, sostener una taza con firmeza, escribir su nombre y volver a hacer por sí mismo esos pequeños gestos que valen tanto.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c8">8</div>
+        <div>
+          <h3>🤝 Dinámicas de Atención y Concentración</h3>
+          <p>Entrenan la capacidad de enfocarse, seguir una instrucción de principio a fin y mantener la mente presente. Una atención más aguda, que se nota en cada conversación y en cada tarea del día.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c9">9</div>
+        <div>
+          <h3>🗣️ Dinámicas de Lenguaje y Comunicación</h3>
+          <p>Mantienen vivas las palabras. Para que tu adulto mayor encuentre con facilidad lo que quiere decir, se exprese con claridad, converse con fluidez y siga disfrutando de comunicarse con los que ama.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c10">10</div>
+        <div>
+          <h3>🎶 Dinámicas Grupales y de Socialización</h3>
+          <p>Transforman un grupo de adultos mayores en una comunidad. Participación, risas, conexión y ese sentimiento de pertenencia que los hace sentirse acompañados, valorados y con ganas de volver a cada encuentro.</p>
+        </div>
+      </div>
+      <div class="deliv-item reveal">
+        <div class="deliv-num c11">11</div>
+        <div>
+          <h3>🧘 Dinámicas de Estiramiento, Respiración y Relajación</h3>
+          <p>Para liberar tensiones, soltar las articulaciones y devolverle al cuerpo su amplitud de movimiento. Una respiración más profunda, una mente más tranquila y esa sensación de bienestar que el adulto mayor se lleva consigo el resto del día.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="highlight-note reveal"><span class="hl">Y así, más de 300 dinámicas organizadas todas separadas por objetivo y nivel. Abres, eliges y aplicas.</span></p>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 3 · ¿QUÉ VAS A RECIBIR? ═══════════ -->
+<section>
+  <svg class="confetti" style="top:80px;left:5%;" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="#FBBF24" stroke="#1E293B" stroke-width="2.5"/></svg>
+  <svg class="confetti" style="bottom:120px;right:5%;" width="44" height="44" viewBox="0 0 44 44"><polygon points="22,3 41,39 3,39" fill="#8B5CF6" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round"/></svg>
+
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Vista por dentro</span>
+      <h2>¿Qué vas a recibir?</h2>
+      <p><strong>+300 dinámicas para adultos mayores, listas para aplicar.</strong></p>
+    </div>
+
+    <div class="reveal" style="max-width:640px;margin:0 auto 56px">
+      <div class="framed-mockup">
+        <img src="images/mockup29set.webp" alt="+300 dinámicas para adultos mayores" class="real-mockup" width="1100" height="825" loading="lazy">
+      </div>
+    </div>
+
+    <h3 class="reveal" style="text-align:center;font-size:1.375rem;margin-bottom:28px">Mira una vista previa de lo que recibirás</h3>
+
+    <!-- CARRUSEL TIPO VITRINA (scroll lento e infinito) -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="slide"><img src="images/entr1.webp" alt="Vista previa de la dinámica 1" width="900" height="1124" loading="lazy"></div>
+        <div class="slide"><img src="images/entr2.webp" alt="Vista previa de la dinámica 2" width="900" height="1124" loading="lazy"></div>
+        <div class="slide"><img src="images/entr3.webp" alt="Vista previa de la dinámica 3" width="900" height="1124" loading="lazy"></div>
+        <div class="slide"><img src="images/entr4.webp" alt="Vista previa de la dinámica 4" width="900" height="1124" loading="lazy"></div>
+        <!-- duplicado para loop continuo -->
+        <div class="slide"><img src="images/entr1.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/entr2.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/entr3.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/entr4.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="carousel-dots" aria-hidden="true">
+      <span class="dot" style="--c:var(--accent);animation-delay:0s"></span>
+      <span class="dot" style="--c:var(--secondary);animation-delay:5s"></span>
+      <span class="dot" style="--c:var(--vivid-green);animation-delay:10s"></span>
+      <span class="dot" style="--c:var(--quaternary);animation-delay:15s"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 4 · BONOS ═══════════ -->
+<section style="background:var(--muted)">
+  <div class="dots"></div>
+  <div class="container">
+
+    <div class="bonus-banner reveal">
+      <p class="font-head" style="font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">
+        Comprando en los días <span class="dates">&gt; 28, 29 y 30 &lt;</span> de septiembre recibes bonos exclusivos
+      </p>
+      <h2>Bonos <span>Exclusivos</span></h2>
+      <p style="margin-top:16px;color:#E2E8F0;max-width:64ch;margin-left:auto;margin-right:auto;font-size:.9688rem">
+        Al adquirir ahora no solo aseguras el material principal sino que también recibes bonos exclusivos creados para complementar tu aprendizaje, y organizar mejor tu práctica sin depender de clases largas ni explicaciones complicadas.
+      </p>
+    </div>
+
+    <div class="bonus-grid">
+      <div class="card bonus-card reveal">
+        <span class="bonus-tag">Bono 01</span>
+        <h3>Guía de Evaluación Funcional del Adulto Mayor</h3>
+        <div class="bonus-img-wrap"><img src="images/bono1.webp" alt="Guía de Evaluación Funcional del Adulto Mayor" width="900" height="829" loading="lazy"></div>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Sabrás exactamente en qué punto está tu adulto mayor desde el primer día: su equilibrio, su fuerza, su movilidad y sus limitaciones, medidos con pruebas simples y claras. Con fichas listas para registrar cada evaluación y ver, mes a mes, cuánto ha avanzado.</p>
+        <div class="price-row">
+          <span class="price-old">DE $19,90</span>
+          <span class="price-free">Gratis</span>
+        </div>
+      </div>
+
+      <div class="card bonus-card reveal">
+        <span class="bonus-tag">Bono 02</span>
+        <h3>Guía de Adaptaciones por Condición de Salud</h3>
+        <div class="bonus-img-wrap"><img src="images/bono2.webp" alt="Guía de Adaptaciones por Condición de Salud" width="900" height="829" loading="lazy"></div>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Sabrás con total seguridad cómo adaptar cada dinámica a la condición de tu adulto mayor: qué cuidar, qué evitar y cuáles son las señales de alerta para detenerte a tiempo. Para aplicar con la tranquilidad de quien sabe exactamente lo que está haciendo, con cualquier paciente que llegue a tus manos.</p>
+        <div class="price-row">
+          <span class="price-old">DE $19,90</span>
+          <span class="price-free">Gratis</span>
+        </div>
+      </div>
+
+      <div class="card bonus-card reveal">
+        <span class="bonus-tag">Bono 03</span>
+        <h3>Calendario de Sesiones Listas para 3 Meses</h3>
+        <div class="bonus-img-wrap"><img src="images/bono3.webp" alt="Calendario de Sesiones Listas para 3 Meses" width="900" height="829" loading="lazy"></div>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Un calendario con cada sesión ya armada para los próximos 3 meses. Día por día, te dice exactamente qué dinámicas del kit aplicar, en qué orden y cómo ir aumentando la dificultad, organizado por objetivo: prevención de caídas, memoria, fuerza y autonomía, y talleres grupales. Solo abres el calendario, ves la sesión del día y la aplicas.</p>
+        <div class="price-row">
+          <span class="price-old">DE $19,90</span>
+          <span class="price-free">Gratis</span>
+        </div>
+      </div>
+
+      <div class="card bonus-card reveal">
+        <span class="bonus-tag">Bono 04</span>
+        <h3>Informes de Evolución para Familias</h3>
+        <div class="bonus-img-wrap"><img src="images/bono4.webp" alt="Informes de Evolución para Familias" width="900" height="829" loading="lazy"></div>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Muestra a cada familia, de forma clara y profesional, todo lo que tu adulto mayor ha avanzado contigo. Informes listos para completar y enviar, que transmiten confianza, justifican tu trabajo y hacen que las familias te recomienden.</p>
+        <div class="price-row">
+          <span class="price-old">DE $19,90</span>
+          <span class="price-free">Gratis</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn">
+        Quiero recibir los materiales
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 5 · CÓMO FUNCIONA ═══════════ -->
+<section>
+  <div class="container">
+    <div class="how-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+      <div class="card how-card reveal" style="padding-top:44px;text-align:center">
+        <span class="how-ico" style="position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:var(--bw) solid var(--foreground);box-shadow:3px 3px 0 var(--foreground);background:var(--accent)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        </span>
+        <h3 style="font-size:1.1875rem;margin-bottom:10px">Guarda y organiza sin complicaciones</h3>
+        <p style="color:#475569;font-size:.9688rem">Todo el material está perfectamente organizado en carpetas por categorías. Simplemente descarga, guarda donde prefieras y ten siempre a mano tus recursos.</p>
+      </div>
+
+      <div class="card how-card reveal" style="padding-top:44px;text-align:center">
+        <span class="how-ico" style="position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:var(--bw) solid var(--foreground);box-shadow:3px 3px 0 var(--foreground);background:var(--secondary)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </span>
+        <h3 style="font-size:1.1875rem;margin-bottom:10px">Acceso seguro e instantáneo</h3>
+        <p style="color:#475569;font-size:.9688rem">Tan pronto como tu compra sea procesada de forma segura, recibirás acceso inmediato en tu correo electrónico y WhatsApp para descargar todo el material completo.</p>
+      </div>
+
+      <div class="card how-card reveal" style="padding-top:44px;text-align:center">
+        <span class="how-ico" style="position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:var(--bw) solid var(--foreground);box-shadow:3px 3px 0 var(--foreground);background:var(--tertiary)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        </span>
+        <h3 style="font-size:1.1875rem;margin-bottom:10px">Imprime con facilidad</h3>
+        <p style="color:#475569;font-size:.9688rem">Accede y consulta todo el material desde tu celular, tablet o computadora. Diseñado de forma visual y práctica para facilitar el aprendizaje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 6 · DEPOIMENTOS ═══════════ -->
+<section style="background:var(--muted)">
+  <div class="dots"></div>
+  <svg class="confetti" style="top:60px;right:8%;" width="40" height="40" viewBox="0 0 40 40"><rect x="4" y="4" width="32" height="32" rx="9" fill="#F472B6" stroke="#1E293B" stroke-width="2.5" transform="rotate(-12 20 20)"/></svg>
+
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Testimonios</span>
+      <h2>Lo que dicen los profesionales que ya aplican las dinámicas</h2>
+    </div>
+
+    <div class="marquee">
+      <div class="marquee-track">
+        <div class="slide"><img src="images/dep1.webp" alt="Testimonio de profesional 1" width="700" height="1243" loading="lazy"></div>
+        <div class="slide"><img src="images/dep2.webp" alt="Testimonio de profesional 2" width="700" height="1243" loading="lazy"></div>
+        <div class="slide"><img src="images/dep3.webp" alt="Testimonio de profesional 3" width="700" height="1243" loading="lazy"></div>
+        <div class="slide"><img src="images/dep4.webp" alt="Testimonio de profesional 4" width="700" height="1243" loading="lazy"></div>
+        <div class="slide"><img src="images/dep5.webp" alt="Testimonio de profesional 5" width="700" height="1243" loading="lazy"></div>
+        <div class="slide"><img src="images/dep6.webp" alt="Testimonio de profesional 6" width="700" height="1243" loading="lazy"></div>
+        <!-- duplicado para loop continuo -->
+        <div class="slide"><img src="images/dep1.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/dep2.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/dep3.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/dep4.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/dep5.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide"><img src="images/dep6.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 7 · PARA QUIÉN ═══════════ -->
+<section>
+  <div class="container">
+    <div class="panel-single">
+      <div class="panel reveal">
+        <h3>¿Para quién es <span style="background:linear-gradient(180deg,transparent 58%,var(--quaternary) 58%);padding:0 3px">indispensable</span> este material?</h3>
+        <ul class="check-list">
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🩺 Fisioterapeutas y Kinesiólogos</strong>Para llegar a cada sesión sabiendo exactamente qué aplicar, con variedad para cada paciente y la seguridad de trabajar con dinámicas claras, progresivas y organizadas por objetivo.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🤝 Cuidadores de Adultos Mayores</strong>Aunque no tengas formación técnica: cada dinámica está explicada paso a paso para que mantengas a tu adulto mayor activo, estimulado y acompañado con total confianza.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🧑‍⚕️ Terapeutas Ocupacionales</strong>Para trabajar la autonomía, la motricidad fina y la estimulación cognitiva con dinámicas listas, pensadas para las actividades de la vida diaria.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🏃 Profesores de Educación Física</strong>Para dar clases a grupos de adultos mayores con dinámicas variadas, seguras y adaptadas a cada nivel, manteniendo a todos activos, motivados y con ganas de volver.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🏡 Residencias, Geriátricos y Centros de Día</strong>Para coordinadores y animadores que necesitan llenar la semana con actividades variadas, grupales y organizadas, sin repetir y sin improvisar.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>👨‍👩‍👧 Familiares que Cuidan en Casa</strong>Para quien cuida a su mamá, papá o abuelo y quiere verlo más activo, más lúcido y más independiente cada día.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 8 · OFERTA / CTA ═══════════ -->
+<section id="oferta">
+  <div class="dots"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Tenemos algo especial para ti</span>
+      <h2>Llévate todo hoy con el descuento de esta página</h2>
+    </div>
+
+    <div class="offer-card reveal">
+      <span class="star-badge">🌟 Más Vendido</span>
+
+      <h3>+300 Dinámicas para Adultos Mayores<br>Todos los Bonos Exclusivos</h3>
+
+      <div class="reveal" style="margin-bottom:26px">
+        <div class="real-mockup-wrap">
+          <img src="images/mockup29set.webp" alt="+300 Dinámicas para Adultos Mayores + Todos los Bonos Exclusivos" class="real-mockup" width="1100" height="825" loading="lazy">
+        </div>
+      </div>
+
+      <ul class="offer-includes">
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> +300 dinámicas para adultos mayores, listas para aplicar</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Organizadas en 12 categorías, 3 niveles de dificultad y por objetivo</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Explicación paso a paso e ilustraciones en cada dinámica</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Listas para imprimir o mostrar en pantalla</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acceso inmediato desde el celular o la computadora</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Actualizaciones mensuales</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Soporte prioritario</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Garantía de 7 días</li>
+        <li><span class="gift-ico">🎁</span> Calendario de Sesiones Listas para 3 Meses</li>
+        <li><span class="gift-ico">🎁</span> Guía de Adaptaciones por Condición de Salud</li>
+        <li><span class="gift-ico">🎁</span> Guía de Evaluación Funcional del Adulto Mayor</li>
+        <li><span class="gift-ico">🎁</span> Informes de Evolución para Familias</li>
+        <li><span class="gift-ico">🎁</span> Kit para Conseguir Más Pacientes y Talleres</li>
+      </ul>
+
+      <hr class="divider-dash">
+
+      <div class="price-box">
+        <div class="price-from">DE $67,90</div>
+        <div class="price-today">Hoy solo</div>
+        <div class="price-main">$9,90</div>
+        <div class="price-inst">O 5X DE $2,98</div>
+        <div class="price-note">Pago único</div>
+        <div class="price-note">⚠️ Puedes pagar en tu moneda local.</div>
+
+        <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn btn-green btn-block" style="margin-top:24px" id="cta-principal">
+          Comprar ahora
+          <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+
+        <div class="secure">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Pago 100% seguro
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 9 · GARANTÍA ═══════════ -->
+<section>
+  <svg class="confetti" style="top:70px;left:8%;" width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="19" r="16" fill="#8B5CF6" stroke="#1E293B" stroke-width="2.5"/></svg>
+  <svg class="confetti" style="bottom:70px;right:8%;" width="42" height="42" viewBox="0 0 42 42"><polygon points="21,3 39,38 3,38" fill="#FBBF24" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round"/></svg>
+
+  <div class="container">
+    <div class="guarantee reveal">
+      <div class="seal">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <h2>7 días de garantía</h2>
+      <p>Puedes comprar con total seguridad. Después de la confirmación tendrás 7 días para acceder a las +300 dinámicas, explorar cada categoría y, si sientes que no es lo que esperabas, solicitar el reembolso íntegro sin complicaciones.</p>
+      <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn">
+        Comprar ahora
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SECCIÓN 10 · FAQ ═══════════ -->
+<section style="background:var(--muted)">
+  <div class="dots"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <div class="faq">
+      <details class="faq-item reveal" open>
+        <summary>¿Cómo recibiré el acceso al material?
+          <span class="faq-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="faq-body">
+          <p>Tan pronto como tu pago sea confirmado, recibirás las +300 dinámicas y todos los bonos de forma automática en tu correo electrónico y también en tu WhatsApp.</p>
+          <p>No necesitas enviar comprobantes ni hacer ningún paso adicional — nuestro sistema envía todo de manera inmediata y segura.</p>
+          <p>Solo asegúrate de escribir correctamente tu correo y tu número de WhatsApp al momento de la compra.</p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿El material es físico o digital?
+          <span class="faq-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="faq-body">
+          <p>Es 100% digital. No se envía nada por correo postal y no pagas gastos de envío.</p>
+          <p>Recibes archivos que puedes ver desde tu celular, tablet o computadora, guardarlos donde prefieras e imprimirlos o mostrarlos en pantalla si te resulta más cómodo aplicar así las dinámicas.</p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Tengo garantía?
+          <span class="faq-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="faq-body">
+          <p>Sí. Tienes 7 días de garantía incondicional a partir de la confirmación de tu compra.</p>
+          <p>Puedes acceder a todo el material, revisarlo con calma y, si sientes que no es lo que esperabas, solicitar el reembolso íntegro sin complicaciones y sin necesidad de explicar el motivo.</p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Para quién es este material?
+          <span class="faq-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="faq-body">
+          <p>Para fisioterapeutas, kinesiólogos, terapeutas ocupacionales, profesores de educación física, cuidadores, residencias, geriátricos y centros de día, y también para familiares que cuidan a un adulto mayor en casa.</p>
+          <p>No necesitas formación técnica para aplicar las dinámicas: cada una viene con explicación paso a paso.</p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Tengo soporte si tengo dudas?
+          <span class="faq-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="faq-body">
+          <p>Sí. Cuentas con soporte especializado por correo y WhatsApp para cualquier duda sobre el acceso, la descarga o el uso del material.</p>
+          <p>Escríbenos y te ayudamos hasta que tengas todo funcionando correctamente.</p>
+        </div>
+      </details>
+    </div>
+
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn">
+        Quiero recibir los materiales
+        <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <strong>+300 Dinámicas para Adultos Mayores</strong>
+  <p>Este producto es 100% digital. Los resultados dependen de la dedicación y la constancia en la aplicación de las dinámicas.</p>
+  <p>Este sitio no forma parte de Facebook ni de Meta Platforms, Inc.</p>
+  <p style="margin-top:14px">&copy; 2026 · Todos los derechos reservados.</p>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(e){e.classList.add('in')});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
