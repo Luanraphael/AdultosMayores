@@ -245,6 +245,12 @@ section{padding:88px 0;position:relative;overflow:hidden}
 .slide img{height:100%;width:auto;display:block;object-fit:contain}
 @media(max-width:600px){.slide{height:270px}.marquee-track{animation-duration:18s}}
 
+/* depoimentos: una imagen grande a la vez */
+.testi-track{animation-duration:36s}
+.testi-slide{height:auto;width:min(360px,78vw)}
+.testi-slide img{height:auto;width:100%;object-fit:contain}
+@media(max-width:600px){.testi-slide{width:82vw}.testi-track{animation-duration:26s}}
+
 .carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:26px}
 .carousel-dots .dot{
   --c:var(--accent);
@@ -652,37 +658,6 @@ footer p{max-width:70ch;margin:0 auto 8px}
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 5 · CÓMO FUNCIONA ═══════════ -->
-<section>
-  <div class="container">
-    <div class="how-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
-      <div class="card how-card reveal" style="padding-top:44px;text-align:center">
-        <span class="how-ico" style="position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:var(--bw) solid var(--foreground);box-shadow:3px 3px 0 var(--foreground);background:var(--accent)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-        </span>
-        <h3 style="font-size:1.1875rem;margin-bottom:10px">Guarda y organiza sin complicaciones</h3>
-        <p style="color:#475569;font-size:.9688rem">Todo el material está perfectamente organizado en carpetas por categorías. Simplemente descarga, guarda donde prefieras y ten siempre a mano tus recursos.</p>
-      </div>
-
-      <div class="card how-card reveal" style="padding-top:44px;text-align:center">
-        <span class="how-ico" style="position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:var(--bw) solid var(--foreground);box-shadow:3px 3px 0 var(--foreground);background:var(--secondary)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-        </span>
-        <h3 style="font-size:1.1875rem;margin-bottom:10px">Acceso seguro e instantáneo</h3>
-        <p style="color:#475569;font-size:.9688rem">Tan pronto como tu compra sea procesada de forma segura, recibirás acceso inmediato en tu correo electrónico y WhatsApp para descargar todo el material completo.</p>
-      </div>
-
-      <div class="card how-card reveal" style="padding-top:44px;text-align:center">
-        <span class="how-ico" style="position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:var(--bw) solid var(--foreground);box-shadow:3px 3px 0 var(--foreground);background:var(--tertiary)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        </span>
-        <h3 style="font-size:1.1875rem;margin-bottom:10px">Imprime con facilidad</h3>
-        <p style="color:#475569;font-size:.9688rem">Accede y consulta todo el material desde tu celular, tablet o computadora. Diseñado de forma visual y práctica para facilitar el aprendizaje.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════ SECCIÓN 6 · DEPOIMENTOS ═══════════ -->
 <section style="background:var(--muted)">
   <div class="dots"></div>
@@ -695,20 +670,20 @@ footer p{max-width:70ch;margin:0 auto 8px}
     </div>
 
     <div class="marquee">
-      <div class="marquee-track">
-        <div class="slide"><img src="images/dep1.webp" alt="Testimonio de profesional 1" width="700" height="1243" loading="lazy"></div>
-        <div class="slide"><img src="images/dep2.webp" alt="Testimonio de profesional 2" width="700" height="1243" loading="lazy"></div>
-        <div class="slide"><img src="images/dep3.webp" alt="Testimonio de profesional 3" width="700" height="1243" loading="lazy"></div>
-        <div class="slide"><img src="images/dep4.webp" alt="Testimonio de profesional 4" width="700" height="1243" loading="lazy"></div>
-        <div class="slide"><img src="images/dep5.webp" alt="Testimonio de profesional 5" width="700" height="1243" loading="lazy"></div>
-        <div class="slide"><img src="images/dep6.webp" alt="Testimonio de profesional 6" width="700" height="1243" loading="lazy"></div>
+      <div class="marquee-track testi-track">
+        <div class="slide testi-slide"><img src="images/dep1.webp" alt="Testimonio de profesional 1" width="700" height="1243" loading="lazy"></div>
+        <div class="slide testi-slide"><img src="images/dep2.webp" alt="Testimonio de profesional 2" width="700" height="1243" loading="lazy"></div>
+        <div class="slide testi-slide"><img src="images/dep3.webp" alt="Testimonio de profesional 3" width="700" height="1243" loading="lazy"></div>
+        <div class="slide testi-slide"><img src="images/dep4.webp" alt="Testimonio de profesional 4" width="700" height="1243" loading="lazy"></div>
+        <div class="slide testi-slide"><img src="images/dep5.webp" alt="Testimonio de profesional 5" width="700" height="1243" loading="lazy"></div>
+        <div class="slide testi-slide"><img src="images/dep6.webp" alt="Testimonio de profesional 6" width="700" height="1243" loading="lazy"></div>
         <!-- duplicado para loop continuo -->
-        <div class="slide"><img src="images/dep1.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/dep2.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/dep3.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/dep4.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/dep5.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/dep6.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide testi-slide"><img src="images/dep1.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide testi-slide"><img src="images/dep2.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide testi-slide"><img src="images/dep3.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide testi-slide"><img src="images/dep4.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide testi-slide"><img src="images/dep5.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
+        <div class="slide testi-slide"><img src="images/dep6.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
       </div>
     </div>
   </div>
