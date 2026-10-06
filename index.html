@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>+300 Dinámicas para Adultos Mayores</title>
-<meta name="description" content="+300 dinámicas para adultos mayores, listas para aplicar. Organizadas en 12 categorías, 3 niveles de dificultad y por objetivo.">
+<title>1500 Actividades para Adultos Mayores</title>
+<meta name="description" content="1500 actividades para adultos mayores: ejercicios físicos, actividades cognitivas y dinámicas grupales, organizadas por objetivo y nivel, con instrucciones paso a paso e ilustraciones.">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -48,6 +48,7 @@ src="https://www.facebook.com/tr?id=1097575629865014&ev=PageView&noscript=1"
   --quaternary:#34D399;
   --vivid-green:#22C55E;
   --brand-blue:#2563EB;
+  --num-blue:#1D4ED8;
   --border:#E2E8F0;
   --card:#FFFFFF;
   --r-sm:8px; --r-md:16px; --r-lg:24px; --r-full:9999px;
@@ -74,8 +75,8 @@ h1,h2,h3,h4,.font-head{font-family:"Outfit",system-ui,sans-serif;font-weight:800
 
 /* ============ LAYOUT ============ */
 .container{max-width:var(--container);margin:0 auto;padding:0 20px;position:relative;z-index:2}
-section{padding:88px 0;position:relative;overflow:hidden}
-@media(max-width:768px){section{padding:56px 0}}
+section{padding:72px 0;position:relative;overflow:hidden}
+@media(max-width:768px){section{padding:48px 0}}
 
 /* ============ DECOR ============ */
 .dots{
@@ -142,7 +143,7 @@ section{padding:88px 0;position:relative;overflow:hidden}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
 
 /* ============ HERO ============ */
-.hero{padding:64px 0 80px}
+.hero{padding:44px 0 56px}
 .hero-grid{display:grid;grid-template-columns:1fr;max-width:640px;margin:0 auto}
 .badge{
   display:inline-flex;align-items:center;gap:8px;
@@ -152,13 +153,12 @@ section{padding:88px 0;position:relative;overflow:hidden}
   text-transform:uppercase;letter-spacing:.04em;
   box-shadow:3px 3px 0 var(--foreground);
 }
-.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin:22px 0 20px}
-.hero h1 .hl{
-  background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);
-  padding:0 4px;
-}
+.hero h1{margin:18px 0 14px;line-height:1.02}
+.hero h1 .num-1500{display:block;font-size:clamp(3.25rem,13vw,5.5rem);color:var(--num-blue);line-height:.92;letter-spacing:-0.03em}
+.hero h1 .h1-line{display:block;font-size:clamp(1.5rem,4.6vw,2.5rem);color:var(--foreground)}
+.hero .support-line{font-family:"Outfit",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--num-blue);margin-bottom:6px}
 .hero p.lead{font-size:1.0625rem;color:#334155;max-width:56ch}
-.hero-list{list-style:none;margin:26px 0 30px;display:grid;gap:12px}
+.hero-list{list-style:none;margin:22px 0 26px;display:grid;gap:12px}
 .hero-list li{display:flex;align-items:center;gap:12px;font-weight:500}
 .tick{
   width:28px;height:28px;flex:0 0 28px;border-radius:50%;
@@ -180,31 +180,37 @@ section{padding:88px 0;position:relative;overflow:hidden}
   .hero .btn{width:100%}
 }
 
-/* ============ REAL-SIZE IMAGE (no bg / no shadow) ============ */
-.real-mockup-wrap{display:flex;align-items:center;justify-content:center;margin:28px 0}
+/* ============ MOCKUP (borde + sombra) ============ */
+.real-mockup-wrap{display:flex;align-items:center;justify-content:center;margin:22px 0}
 .real-mockup{display:block;width:100%;height:auto;object-fit:contain}
-
-/* framed variant (section "¿Qué vas a recibir?") */
 .framed-mockup{
   background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
-  padding:22px;box-shadow:8px 8px 0 var(--border);
+  padding:18px;box-shadow:8px 8px 0 var(--border);
   display:flex;align-items:center;justify-content:center;
 }
-@media(max-width:600px){.framed-mockup{padding:16px;box-shadow:4px 4px 0 var(--border)}}
-
+@media(max-width:600px){.framed-mockup{padding:14px;box-shadow:4px 4px 0 var(--border)}}
 .mockup-block{text-align:center}
 
 /* ============ SECTION HEADINGS ============ */
-.sec-head{text-align:center;max-width:820px;margin:0 auto 52px}
+.sec-head{text-align:center;max-width:820px;margin:0 auto 44px}
 .sec-head h2{font-size:clamp(1.75rem,3.6vw,2.75rem)}
 .sec-head p{margin-top:16px;color:#475569;font-size:1.0625rem}
 .eyebrow{
   display:inline-block;font-family:"Outfit",sans-serif;font-weight:800;
   font-size:.8125rem;text-transform:uppercase;letter-spacing:.14em;
-  color:var(--accent);margin-bottom:12px;
+  color:var(--brand-blue);margin-bottom:12px;
 }
 
-/* ============ CATEGORÍAS LIST (S2) ============ */
+/* ============ ABRE · ELIGE · APLICA ============ */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+@media(max-width:860px){.steps-grid{grid-template-columns:1fr}}
+.step-card{background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);padding:28px;text-align:center;box-shadow:5px 5px 0 var(--border)}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--num-blue);color:#fff;display:grid;place-items:center;margin:0 auto 14px;font-family:"Outfit",sans-serif;font-weight:800;font-size:1.125rem;border:var(--bw) solid var(--foreground)}
+.step-card h3{font-size:1.125rem;margin-bottom:8px}
+.step-card p{color:#475569;font-size:.9375rem}
+.steps-close{text-align:center;margin-top:28px;font-weight:700;font-family:"Outfit",sans-serif;font-size:1.0625rem}
+
+/* ============ CATEGORÍAS LIST ============ */
 .deliv{display:grid;gap:20px}
 .deliv-item{
   display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;
@@ -218,8 +224,8 @@ section{padding:88px 0;position:relative;overflow:hidden}
   border:var(--bw) solid var(--foreground);
   font-family:"Outfit",sans-serif;font-weight:800;font-size:1.25rem;color:#fff;
 }
-.c1{background:var(--accent)} .c2{background:var(--secondary)} .c3{background:var(--tertiary);color:var(--foreground)!important} .c4{background:var(--quaternary);color:var(--foreground)!important} .c5{background:var(--accent)}
-.c6{background:var(--secondary)} .c7{background:var(--tertiary);color:var(--foreground)!important} .c8{background:var(--quaternary);color:var(--foreground)!important} .c9{background:var(--accent)} .c10{background:var(--secondary)} .c11{background:var(--tertiary);color:var(--foreground)!important}
+.c1{background:var(--brand-blue)} .c2{background:var(--secondary)} .c3{background:var(--tertiary);color:var(--foreground)!important} .c4{background:var(--quaternary);color:var(--foreground)!important} .c5{background:var(--brand-blue)}
+.c6{background:var(--secondary)} .c7{background:var(--tertiary);color:var(--foreground)!important} .c8{background:var(--quaternary);color:var(--foreground)!important} .c9{background:var(--brand-blue)} .c10{background:var(--secondary)} .c11{background:var(--tertiary);color:var(--foreground)!important}
 .deliv-item h3{font-size:1.1875rem;margin-bottom:6px}
 .deliv-item p{color:#475569;font-size:.9688rem}
 @media(max-width:600px){.deliv-item{padding:20px;gap:14px}.deliv-num{width:42px;height:42px;font-size:1rem}}
@@ -227,7 +233,37 @@ section{padding:88px 0;position:relative;overflow:hidden}
 .highlight-note{text-align:center;font-size:1.125rem;font-weight:700;max-width:720px;margin:40px auto 0;font-family:"Outfit",sans-serif}
 .highlight-note .hl{background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);padding:0 4px}
 
-/* ============ CARROUSEL VITRINE ============ */
+/* ============ FICHA EXPLAIN ============ */
+.ficha-explain{max-width:820px;margin:0 auto 44px;text-align:center}
+.ficha-explain h3{font-size:1.375rem;margin-bottom:14px}
+.ficha-explain>p{color:#475569;font-size:1rem;margin-bottom:20px}
+.ficha-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:18px}
+.ficha-chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-full);padding:8px 16px;font-family:"Outfit",sans-serif;font-weight:700;font-size:.875rem}
+.ficha-chip .dot2{width:8px;height:8px;border-radius:50%;background:var(--brand-blue)}
+.ficha-note{font-size:.9375rem;color:#475569;max-width:620px;margin:0 auto}
+
+/* ============ GALERÍA / CARRUSEL ============ */
+.gallery-wrap{position:relative;max-width:920px;margin:0 auto}
+.gallery-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:6px 4px;scrollbar-width:none}
+.gallery-track::-webkit-scrollbar{display:none}
+.g-slide{flex:0 0 auto;width:min(300px,76vw);scroll-snap-align:center;border:var(--bw) solid var(--foreground);border-radius:var(--r-md);overflow:hidden;padding:0;background:#fff;cursor:zoom-in;box-shadow:4px 4px 0 var(--border);display:block}
+.g-slide img{width:100%;height:auto;display:block}
+.g-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:var(--bw) solid var(--foreground);display:grid;place-items:center;font-size:1.3rem;cursor:pointer;box-shadow:3px 3px 0 var(--foreground);z-index:4}
+.g-prev{left:-10px}.g-next{right:-10px}
+@media(max-width:760px){.g-nav{display:none}}
+.gallery-counter{text-align:center;margin-top:16px;font-family:"Outfit",sans-serif;font-weight:700;color:var(--muted-fg);font-size:.9375rem}
+.gallery-hint{text-align:center;margin-top:6px;color:var(--muted-fg);font-size:.875rem}
+
+.lightbox{position:fixed;inset:0;background:rgba(15,23,42,.92);z-index:200;display:flex;align-items:center;justify-content:center}
+.lightbox[hidden]{display:none}
+.lb-img{max-width:min(90vw,640px);max-height:84vh;border-radius:var(--r-md);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.lb-close{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:#fff;border:none;font-size:1.25rem;cursor:pointer;display:grid;place-items:center}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#fff;border:none;font-size:1.5rem;cursor:pointer;display:grid;place-items:center}
+.lb-prev{left:18px}.lb-next{right:18px}
+.lb-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#fff;font-family:"Outfit",sans-serif;font-weight:700}
+@media(max-width:600px){.lb-nav{width:40px;height:40px;font-size:1.25rem}.lb-prev{left:8px}.lb-next{right:8px}}
+
+/* ============ TESTIMONIOS CARRUSEL (auto) ============ */
 .marquee{
   position:relative;overflow:hidden;padding:10px 0;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
@@ -236,34 +272,14 @@ section{padding:88px 0;position:relative;overflow:hidden}
 .marquee-track{display:flex;gap:16px;width:max-content;animation:scroll 24s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.slide{
-  flex:0 0 auto;height:380px;
-  border-radius:var(--r-md);
-  overflow:hidden;
-  display:flex;align-items:center;
-}
+.slide{flex:0 0 auto;height:380px;border-radius:var(--r-md);overflow:hidden;display:flex;align-items:center}
 .slide img{height:100%;width:auto;display:block;object-fit:contain}
-@media(max-width:600px){.slide{height:270px}.marquee-track{animation-duration:18s}}
-
-/* depoimentos: una imagen grande a la vez */
 .testi-track{animation-duration:36s}
 .testi-slide{height:auto;width:min(360px,78vw)}
 .testi-slide img{height:auto;width:100%;object-fit:contain}
 @media(max-width:600px){.testi-slide{width:82vw}.testi-track{animation-duration:26s}}
 
-.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:26px}
-.carousel-dots .dot{
-  --c:var(--accent);
-  width:10px;height:10px;border-radius:50%;
-  background:var(--border);border:var(--bw) solid var(--foreground);
-  animation:dotPulse 20s ease-in-out infinite;
-}
-@keyframes dotPulse{
-  0%,14%{background:var(--c);transform:scale(1.35)}
-  20%,100%{background:var(--border);transform:scale(1)}
-}
-
-/* ============ BONUS (S5) ============ */
+/* ============ BONUS ============ */
 .bonus-banner{
   background:var(--brand-blue);color:#fff;border-radius:var(--r-lg);
   border:var(--bw) solid var(--foreground);
@@ -296,7 +312,7 @@ section{padding:88px 0;position:relative;overflow:hidden}
   box-shadow:3px 3px 0 var(--foreground);
 }
 
-/* ============ WHY / FOR WHOM (S7) ============ */
+/* ============ PARA QUIÉN ============ */
 .panel-single{max-width:820px;margin:0 auto}
 .panel{
   background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
@@ -309,7 +325,13 @@ section{padding:88px 0;position:relative;overflow:hidden}
 .check-list strong{color:var(--foreground);font-family:"Outfit",sans-serif;font-weight:700;font-size:1rem;display:block;margin-bottom:3px}
 @media(max-width:600px){.panel{padding:24px;box-shadow:4px 4px 0 var(--border)}}
 
-/* ============ OFFER (S8) ============ */
+/* ============ OBJECIONES ============ */
+.objection-grid{display:grid;gap:16px;max-width:820px;margin:0 auto}
+.objection-card{background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-md);padding:22px 24px;box-shadow:4px 4px 0 var(--border)}
+.objection-card h3{font-size:1.0625rem;margin-bottom:8px;color:var(--brand-blue)}
+.objection-card p{color:#475569;font-size:.9375rem}
+
+/* ============ OFERTA ============ */
 #oferta{background:var(--foreground);color:#fff}
 #oferta .dots{background-image:radial-gradient(circle, rgba(255,255,255,.16) 1.5px, transparent 1.6px)}
 #oferta .sec-head h2{color:#fff}
@@ -326,7 +348,8 @@ section{padding:88px 0;position:relative;overflow:hidden}
   font-family:"Outfit",sans-serif;font-weight:800;font-size:.875rem;
   text-transform:uppercase;letter-spacing:.05em;box-shadow:4px 4px 0 var(--foreground);
 }
-.offer-card h3{font-size:1.5rem;text-align:center;margin:18px 0 24px;line-height:1.25}
+.offer-card h3{font-size:1.5rem;text-align:center;margin:18px 0 6px;line-height:1.25}
+.offer-complement{text-align:center;color:var(--muted-fg);font-size:.9375rem;font-weight:600;margin-bottom:22px}
 .offer-includes{list-style:none;display:grid;gap:13px;margin:26px 0}
 .offer-includes li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;font-size:.9688rem}
 .divider-dash{border:0;border-top:2px dashed var(--border);margin:26px 0}
@@ -339,17 +362,18 @@ section{padding:88px 0;position:relative;overflow:hidden}
   border-radius:var(--r-full);padding:5px 16px;margin:12px 0 6px;
   box-shadow:3px 3px 0 var(--foreground);
 }
-.price-main{font-family:"Outfit",sans-serif;font-weight:800;font-size:clamp(3rem,9vw,4.25rem);line-height:1;color:var(--accent)}
+.price-main{font-family:"Outfit",sans-serif;font-weight:800;font-size:clamp(3rem,9vw,4.25rem);line-height:1;color:var(--num-blue)}
 .price-inst{font-weight:700;margin-top:8px}
 .price-note{color:var(--muted-fg);font-size:.875rem;margin-top:6px}
 .secure{
   display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;
   font-family:"Outfit",sans-serif;font-weight:700;font-size:.8125rem;
   text-transform:uppercase;letter-spacing:.06em;color:var(--muted-fg);
+  flex-wrap:wrap;
 }
 @media(max-width:600px){.offer-card{padding:26px 20px;box-shadow:6px 6px 0 var(--secondary)}}
 
-/* ============ GUARANTEE (S9) ============ */
+/* ============ GARANTÍA ============ */
 .guarantee{
   max-width:820px;margin:0 auto;text-align:center;
   background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
@@ -364,7 +388,7 @@ section{padding:88px 0;position:relative;overflow:hidden}
 .guarantee p{color:#475569;max-width:62ch;margin:0 auto 28px}
 @media(max-width:600px){.guarantee{padding:30px 20px;box-shadow:5px 5px 0 var(--quaternary)}}
 
-/* ============ FAQ (S10) ============ */
+/* ============ FAQ ============ */
 .faq{max-width:820px;margin:0 auto;display:grid;gap:16px}
 .faq-item{
   background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-md);
@@ -379,7 +403,7 @@ section{padding:88px 0;position:relative;overflow:hidden}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-plus{
   width:32px;height:32px;flex:0 0 32px;border-radius:50%;
-  background:var(--accent);border:var(--bw) solid var(--foreground);
+  background:var(--brand-blue);border:var(--bw) solid var(--foreground);
   display:grid;place-items:center;color:#fff;transition:transform .3s var(--bounce);
 }
 .faq-item[open] .faq-plus{transform:rotate(45deg);background:var(--secondary)}
@@ -394,6 +418,7 @@ footer{
 }
 footer strong{color:#fff;font-family:"Outfit",sans-serif;display:block;margin-bottom:10px;font-size:1rem}
 footer p{max-width:70ch;margin:0 auto 8px}
+footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
 
 /* ============ ENTRANCE ANIMATION ============ */
 .reveal{opacity:0;transform:scale(.94) translateY(18px)}
@@ -409,10 +434,10 @@ footer p{max-width:70ch;margin:0 auto 8px}
 </head>
 <body>
 
-<!-- ═══════════ TOP BAR ═══════════ -->
+<!-- ═══════════ 1. TOP BAR ═══════════ -->
 <div class="topbar"><span class="pulse"></span>¡Descuento solo HOY en esta página!</div>
 
-<!-- ═══════════ SECCIÓN 1 · HERO ═══════════ -->
+<!-- ═══════════ 2. HERO ═══════════ -->
 <section class="hero">
   <div class="blob blob-hide" style="width:520px;height:520px;background:var(--tertiary);opacity:.5;top:-90px;left:-160px"></div>
   <svg class="confetti" style="top:70px;right:12%;" width="46" height="46" viewBox="0 0 46 46"><polygon points="23,3 43,41 3,41" fill="#F472B6" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round"/></svg>
@@ -427,12 +452,15 @@ footer p{max-width:70ch;margin:0 auto 8px}
           FISIOTERAPEUTAS · T.O. · EDUCADORES FÍSICOS · CUIDADORES
         </span>
 
-        <h1><span class="hl">+300 dinámicas</span> para adultos mayores, listas para aplicar.</h1>
+        <h1><span class="num-1500">1500</span><span class="h1-line">Actividades para</span><span class="h1-line">Adultos Mayores</span></h1>
 
-        <p class="lead">Organizadas en 12 categorías, 3 niveles de dificultad y por objetivo, todas con explicación paso a paso e ilustraciones. Tu sesión lista en menos de 1 minuto.</p>
+        <p class="lead">Ejercicios físicos, actividades cognitivas y dinámicas grupales, organizados por objetivo y nivel, con instrucciones paso a paso e ilustraciones. Abres, eliges y preparas tu sesión en minutos.</p>
+        <p class="support-line">Deja de planificar cada sesión desde cero.</p>
 
-        <div class="real-mockup-wrap" style="max-width:420px">
-          <img src="images/mockup29set.webp" alt="+300 dinámicas para adultos mayores" class="real-mockup" width="1100" height="825" loading="eager">
+        <div class="real-mockup-wrap" style="max-width:320px">
+          <div class="framed-mockup">
+            <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="real-mockup" width="1000" height="1500" loading="eager">
+          </div>
         </div>
 
         <ul class="hero-list">
@@ -442,7 +470,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         </ul>
 
         <a href="#oferta" class="btn">
-          Quiero recibir los materiales
+          Quiero recibir las 1500 actividades
           <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
       </div>
@@ -450,147 +478,185 @@ footer p{max-width:70ch;margin:0 auto 8px}
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 2 · CATEGORÍAS ═══════════ -->
+<!-- ═══════════ 3. ASÍ DE SIMPLE: ABRE, ELIGE Y APLICA ═══════════ -->
 <section style="background:var(--muted)">
   <div class="dots"></div>
   <div class="container">
     <div class="sec-head reveal">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>Así de simple: abre, elige y aplica</h2>
+      <p>Menos tiempo buscando qué hacer. Más claridad para preparar cada sesión.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3>Abre</h3>
+        <p>Accede al material organizado por objetivo y nivel.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <h3>Elige</h3>
+        <p>Selecciona la actividad según lo que quieres trabajar y las necesidades del adulto mayor.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <h3>Aplica</h3>
+        <p>Consulta las instrucciones y las ilustraciones, e imprime la ficha o utilízala en pantalla.</p>
+      </div>
+    </div>
+
+    <p class="steps-close reveal">Tu próxima sesión empieza con una actividad elegida, no con una página en blanco.</p>
+  </div>
+</section>
+
+<!-- ═══════════ 4. CATEGORÍAS ═══════════ -->
+<section>
+  <div class="container">
+    <div class="sec-head reveal">
       <span class="eyebrow">Contenido completo</span>
-      <h2>Todo lo que tu adulto mayor necesita trabajar, en un solo lugar</h2>
-      <p>12 categorías de dinámicas, cada una pensada para un objetivo específico.</p>
+      <h2>Todo lo que necesitas trabajar con adultos mayores, en un solo lugar</h2>
+      <p>Actividades físicas, cognitivas y grupales organizadas por objetivo, para encontrar con más facilidad qué aplicar.</p>
     </div>
 
     <div class="deliv">
       <div class="deliv-item reveal">
         <div class="deliv-num c1">1</div>
         <div>
-          <h3>🛡️ Dinámicas para Prevenir Caídas y Mejorar el Equilibrio</h3>
-          <p>Pensadas para que tu adulto mayor gane firmeza en cada paso, se mantenga estable al caminar, al girar y al levantarse, y vuelva a moverse con la seguridad de quien confía en su propio cuerpo. Un equilibrio real, trabajado de forma progresiva, para que cada paso sea más firme que el anterior.</p>
+          <h3>Actividades para Prevenir Caídas y Mejorar el Equilibrio</h3>
+          <p>Para trabajar la firmeza al caminar, al girar y al levantarse, con una progresión pensada para ganar estabilidad paso a paso.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c2">2</div>
         <div>
-          <h3>🧠 Dinámicas para Estimular la Memoria</h3>
-          <p>Creadas para mantener la mente activa, despierta y ágil. Para que tu adulto mayor recuerde con más facilidad nombres, rostros, fechas y momentos, conserve su historia y siga siendo esa persona lúcida que su familia conoce y ama.</p>
+          <h3>Actividades para Estimular la Memoria</h3>
+          <p>Para apoyar una mente activa y despierta: recordar nombres, rostros, fechas y momentos del día a día.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c3">3</div>
         <div>
-          <h3>🚶 Dinámicas para la Autonomía en el Día a Día</h3>
-          <p>Enfocadas en los movimientos que el adulto mayor necesita todos los días: levantarse, sentarse, vestirse, alcanzar un objeto, subir un escalón. Para que pueda hacerlo por sí mismo, sin depender de nadie, con dignidad e independencia.</p>
+          <h3>Actividades para la Autonomía en el Día a Día</h3>
+          <p>Para practicar los movimientos que se repiten cada día: levantarse, sentarse, vestirse, alcanzar un objeto, subir un escalón.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c4">4</div>
         <div>
-          <h3>💪 Dinámicas para Ganar Fuerza y Frenar la Pérdida Muscular</h3>
-          <p>Para que tu adulto mayor recupere y mantenga la fuerza en piernas, brazos y tronco. Músculos que lo sostienen, lo protegen y le permiten seguir haciendo todo lo que quiere hacer, con más energía y menos cansancio.</p>
+          <h3>Ejercicios para Trabajar la Fuerza y el Mantenimiento Muscular</h3>
+          <p>Para apoyar la fuerza en piernas, brazos y tronco, con cargas progresivas adaptadas a cada nivel.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c5">5</div>
         <div>
-          <h3>🤹 Dinámicas de Coordinación Motora</h3>
-          <p>Ponen cuerpo y mente a trabajar en perfecta sintonía. Movimientos más precisos, reacciones más rápidas y un control del cuerpo que se nota en cada gesto: al caminar, al tomar un objeto, al moverse en su día a día.</p>
+          <h3>Actividades de Coordinación Motora</h3>
+          <p>Para practicar movimientos más precisos y un control del cuerpo que se nota al caminar, al tomar un objeto y en el día a día.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c6">6</div>
         <div>
-          <h3>♿ Dinámicas en Silla para Movilidad Reducida</h3>
-          <p>Diseñadas para adultos mayores que no pueden estar de pie o que usan silla de ruedas. Cada movimiento está pensado para hacerse sentado y con total seguridad, para que ellos también se muevan, se activen y sientan que su cuerpo sigue respondiendo.</p>
+          <h3>Actividades en Silla para Movilidad Reducida</h3>
+          <p>Pensadas para adultos mayores que no pueden estar de pie o que usan silla de ruedas, con cada movimiento adaptado para hacerse sentado.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c7">7</div>
         <div>
-          <h3>✋ Dinámicas de Motricidad Fina</h3>
-          <p>Para devolverle precisión y control a las manos. Para que tu adulto mayor pueda abotonarse, sostener una taza con firmeza, escribir su nombre y volver a hacer por sí mismo esos pequeños gestos que valen tanto.</p>
+          <h3>Actividades de Motricidad Fina</h3>
+          <p>Para practicar precisión y control en las manos: abotonarse, sostener una taza, escribir, y otros gestos cotidianos.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c8">8</div>
         <div>
-          <h3>🤝 Dinámicas de Atención y Concentración</h3>
-          <p>Entrenan la capacidad de enfocarse, seguir una instrucción de principio a fin y mantener la mente presente. Una atención más aguda, que se nota en cada conversación y en cada tarea del día.</p>
+          <h3>Actividades de Atención y Concentración</h3>
+          <p>Para entrenar la capacidad de enfocarse y seguir una instrucción de principio a fin.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c9">9</div>
         <div>
-          <h3>🗣️ Dinámicas de Lenguaje y Comunicación</h3>
-          <p>Mantienen vivas las palabras. Para que tu adulto mayor encuentre con facilidad lo que quiere decir, se exprese con claridad, converse con fluidez y siga disfrutando de comunicarse con los que ama.</p>
+          <h3>Actividades de Lenguaje y Comunicación</h3>
+          <p>Para apoyar la expresión y la conversación, y acompañar a quien disfruta de comunicarse con los que ama.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c10">10</div>
         <div>
-          <h3>🎶 Dinámicas Grupales y de Socialización</h3>
-          <p>Transforman un grupo de adultos mayores en una comunidad. Participación, risas, conexión y ese sentimiento de pertenencia que los hace sentirse acompañados, valorados y con ganas de volver a cada encuentro.</p>
+          <h3>Dinámicas Grupales y de Socialización</h3>
+          <p>Para transformar un grupo de adultos mayores en una comunidad: participación, conexión y sentido de pertenencia.</p>
         </div>
       </div>
       <div class="deliv-item reveal">
         <div class="deliv-num c11">11</div>
         <div>
-          <h3>🧘 Dinámicas de Estiramiento, Respiración y Relajación</h3>
-          <p>Para liberar tensiones, soltar las articulaciones y devolverle al cuerpo su amplitud de movimiento. Una respiración más profunda, una mente más tranquila y esa sensación de bienestar que el adulto mayor se lleva consigo el resto del día.</p>
+          <h3>Ejercicios de Estiramiento, Respiración y Relajación</h3>
+          <p>Para liberar tensiones, soltar las articulaciones y acompañar una respiración más profunda y tranquila.</p>
         </div>
       </div>
     </div>
 
-    <p class="highlight-note reveal"><span class="hl">Y así, más de 300 dinámicas organizadas todas separadas por objetivo y nivel. Abres, eliges y aplicas.</span></p>
+    <p class="highlight-note reveal"><span class="hl">1500 actividades para ampliar tu repertorio y preparar sesiones con más variedad. Abres, eliges y aplicas.</span></p>
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 3 · ¿QUÉ VAS A RECIBIR? ═══════════ -->
-<section>
+<!-- ═══════════ 5-6. VISTA POR DENTRO: FICHAS + GALERÍA ═══════════ -->
+<section style="background:var(--muted)">
+  <div class="dots"></div>
   <svg class="confetti" style="top:80px;left:5%;" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="#FBBF24" stroke="#1E293B" stroke-width="2.5"/></svg>
-  <svg class="confetti" style="bottom:120px;right:5%;" width="44" height="44" viewBox="0 0 44 44"><polygon points="22,3 41,39 3,39" fill="#8B5CF6" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round"/></svg>
+  <svg class="confetti" style="bottom:120px;right:5%;" width="44" height="44" viewBox="0 0 44 44"><polygon points="22,3 41,39 3,39" fill="#2563EB" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round"/></svg>
 
   <div class="container">
     <div class="sec-head reveal">
       <span class="eyebrow">Vista por dentro</span>
-      <h2>¿Qué vas a recibir?</h2>
-      <p><strong>+300 dinámicas para adultos mayores, listas para aplicar.</strong></p>
+      <h2>Así se ve el material que vas a recibir</h2>
+      <p>Fichas ilustradas y actividades imprimibles para consultar, elegir y aplicar.</p>
     </div>
 
-    <div class="reveal" style="max-width:640px;margin:0 auto 56px">
-      <div class="framed-mockup">
-        <img src="images/mockup29set.webp" alt="+300 dinámicas para adultos mayores" class="real-mockup" width="1100" height="825" loading="lazy">
+    <div class="ficha-explain reveal">
+      <h3>Cada ficha te ayuda a entender qué trabajar y cómo aplicarlo</h3>
+      <p>En las fichas de ejercicios encontrarás el objetivo, las indicaciones, las precauciones, los materiales y una secuencia ilustrada paso a paso.</p>
+      <div class="ficha-chips">
+        <span class="ficha-chip"><span class="dot2"></span>Objetivo</span>
+        <span class="ficha-chip"><span class="dot2"></span>Indicaciones</span>
+        <span class="ficha-chip"><span class="dot2"></span>Precauciones</span>
+        <span class="ficha-chip"><span class="dot2"></span>Materiales</span>
+        <span class="ficha-chip"><span class="dot2"></span>Paso a paso ilustrado</span>
       </div>
+      <p class="ficha-note">También encontrarás actividades cognitivas imprimibles, como laberintos, sopas de letras y tareas de secuenciación.</p>
     </div>
 
-    <h3 class="reveal" style="text-align:center;font-size:1.375rem;margin-bottom:28px">Mira una vista previa de lo que recibirás</h3>
-
-    <!-- CARRUSEL TIPO VITRINA (scroll lento e infinito) -->
-    <div class="marquee">
-      <div class="marquee-track">
-        <div class="slide"><img src="images/entr1.webp" alt="Vista previa de la dinámica 1" width="900" height="1124" loading="lazy"></div>
-        <div class="slide"><img src="images/entr2.webp" alt="Vista previa de la dinámica 2" width="900" height="1124" loading="lazy"></div>
-        <div class="slide"><img src="images/entr3.webp" alt="Vista previa de la dinámica 3" width="900" height="1124" loading="lazy"></div>
-        <div class="slide"><img src="images/entr4.webp" alt="Vista previa de la dinámica 4" width="900" height="1124" loading="lazy"></div>
-        <!-- duplicado para loop continuo -->
-        <div class="slide"><img src="images/entr1.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/entr2.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/entr3.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
-        <div class="slide"><img src="images/entr4.webp" alt="" width="900" height="1124" loading="lazy" aria-hidden="true"></div>
+    <div class="gallery-wrap reveal">
+      <div class="gallery-track" id="galleryTrack">
+        <button type="button" class="g-slide" data-idx="0"><img src="images/ficha-flexion-biceps.webp" alt="Vista previa: Flexión de bíceps" width="900" height="1350" loading="lazy"></button>
+        <button type="button" class="g-slide" data-idx="1"><img src="images/ficha-brazo-pierna.webp" alt="Vista previa: Brazo y pierna (coordinación)" width="900" height="1350" loading="lazy"></button>
+        <button type="button" class="g-slide" data-idx="2"><img src="images/ficha-rodar-palma.webp" alt="Vista previa: Rodar en la palma (motricidad fina)" width="900" height="1350" loading="lazy"></button>
+        <button type="button" class="g-slide" data-idx="3"><img src="images/cog-laberinto.webp" alt="Vista previa: ejercicio cognitivo de laberinto" width="900" height="1350" loading="lazy"></button>
+        <button type="button" class="g-slide" data-idx="4"><img src="images/cog-sopa-letras.webp" alt="Vista previa: ejercicio cognitivo de sopa de letras" width="900" height="1350" loading="lazy"></button>
+        <button type="button" class="g-slide" data-idx="5"><img src="images/cog-ordenar-pasos.webp" alt="Vista previa: ejercicio cognitivo de ordenar los pasos" width="900" height="1350" loading="lazy"></button>
       </div>
+      <button type="button" class="g-nav g-prev" id="gPrev" aria-label="Página anterior">‹</button>
+      <button type="button" class="g-nav g-next" id="gNext" aria-label="Página siguiente">›</button>
     </div>
-
-    <div class="carousel-dots" aria-hidden="true">
-      <span class="dot" style="--c:var(--accent);animation-delay:0s"></span>
-      <span class="dot" style="--c:var(--secondary);animation-delay:5s"></span>
-      <span class="dot" style="--c:var(--vivid-green);animation-delay:10s"></span>
-      <span class="dot" style="--c:var(--quaternary);animation-delay:15s"></span>
-    </div>
+    <div class="gallery-counter" id="gCounter">1 / 6</div>
+    <p class="gallery-hint">Desliza para ver más · toca una página para ampliarla</p>
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 4 · BONOS ═══════════ -->
-<section style="background:var(--muted)">
-  <div class="dots"></div>
+<!-- Lightbox de la galería -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de la ficha" hidden>
+  <button type="button" class="lb-close" id="lbClose" aria-label="Cerrar">✕</button>
+  <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Página anterior">‹</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Página siguiente">›</button>
+  <div class="lb-counter" id="lbCounter">1 / 6</div>
+</div>
+
+<!-- ═══════════ 7. BONOS ═══════════ -->
+<section>
   <div class="container">
 
     <div class="bonus-banner reveal">
@@ -599,7 +665,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
       </p>
       <h2>Bonos <span>Exclusivos</span></h2>
       <p style="margin-top:16px;color:#E2E8F0;max-width:64ch;margin-left:auto;margin-right:auto;font-size:.9688rem">
-        Al adquirir ahora no solo aseguras las +300 dinámicas, sino que también recibes bonos exclusivos creados para que evalúes, adaptes y planifiques cada sesión con total seguridad, y demuestres a cada familia el avance de tu adulto mayor.
+        Además de las 1500 actividades, recibes recursos para evaluar el punto de partida, adaptar las propuestas, organizar tus sesiones y registrar la evolución.
       </p>
     </div>
 
@@ -608,7 +674,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         <span class="bonus-tag">Bono 01</span>
         <h3>Guía de Evaluación Funcional del Adulto Mayor</h3>
         <div class="bonus-img-wrap"><img src="images/bono1.webp" alt="Guía de Evaluación Funcional del Adulto Mayor" width="900" height="829" loading="lazy"></div>
-        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Sabrás exactamente en qué punto está tu adulto mayor desde el primer día: su equilibrio, su fuerza, su movilidad y sus limitaciones, medidos con pruebas simples y claras. Con fichas listas para registrar cada evaluación y ver, mes a mes, cuánto ha avanzado.</p>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Sabrás en qué punto está tu adulto mayor desde el primer día: su equilibrio, su fuerza, su movilidad y sus limitaciones, medidos con pruebas simples y claras. Con fichas listas para registrar cada evaluación y ver, mes a mes, cómo avanza.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
           <span class="price-free">Gratis</span>
@@ -619,7 +685,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         <span class="bonus-tag">Bono 02</span>
         <h3>Guía de Adaptaciones por Condición de Salud</h3>
         <div class="bonus-img-wrap"><img src="images/bono2.webp" alt="Guía de Adaptaciones por Condición de Salud" width="900" height="829" loading="lazy"></div>
-        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Sabrás con total seguridad cómo adaptar cada dinámica a la condición de tu adulto mayor: qué cuidar, qué evitar y cuáles son las señales de alerta para detenerte a tiempo. Para aplicar con la tranquilidad de quien sabe exactamente lo que está haciendo, con cualquier paciente que llegue a tus manos.</p>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Te orienta cómo adaptar cada actividad a la condición de tu adulto mayor: qué cuidar, qué evitar y cuáles son las señales de alerta para detenerte a tiempo. Un apoyo para decidir con más criterio, sin reemplazar la valoración profesional cuando corresponda.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
           <span class="price-free">Gratis</span>
@@ -630,7 +696,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         <span class="bonus-tag">Bono 03</span>
         <h3>Calendario de Sesiones Listas para 3 Meses</h3>
         <div class="bonus-img-wrap"><img src="images/bono3.webp" alt="Calendario de Sesiones Listas para 3 Meses" width="900" height="829" loading="lazy"></div>
-        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Un calendario con cada sesión ya armada para los próximos 3 meses. Día por día, te dice exactamente qué dinámicas del kit aplicar, en qué orden y cómo ir aumentando la dificultad, organizado por objetivo: prevención de caídas, memoria, fuerza y autonomía, y talleres grupales. Solo abres el calendario, ves la sesión del día y la aplicas.</p>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Un calendario con cada sesión ya armada para los próximos 3 meses. Día por día, te dice qué actividades del kit aplicar, en qué orden y cómo ir aumentando la dificultad, organizado por objetivo: prevención de caídas, memoria, fuerza, autonomía y talleres grupales.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
           <span class="price-free">Gratis</span>
@@ -641,7 +707,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         <span class="bonus-tag">Bono 04</span>
         <h3>Informes de Evolución para Familias</h3>
         <div class="bonus-img-wrap"><img src="images/bono4.webp" alt="Informes de Evolución para Familias" width="900" height="829" loading="lazy"></div>
-        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Muestra a cada familia, de forma clara y profesional, todo lo que tu adulto mayor ha avanzado contigo. Informes listos para completar y enviar, que transmiten confianza, justifican tu trabajo y hacen que las familias te recomienden.</p>
+        <p style="color:#475569;font-size:.9375rem;margin-top:8px">Muestra a cada familia, de forma clara y profesional, todo lo que tu adulto mayor ha avanzado contigo. Informes listos para completar y enviar, que transmiten confianza y respaldan tu trabajo.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
           <span class="price-free">Gratis</span>
@@ -651,14 +717,14 @@ footer p{max-width:70ch;margin:0 auto 8px}
 
     <div style="text-align:center;margin-top:44px" class="reveal">
       <a href="#oferta" class="btn">
-        Quiero recibir los materiales
+        Quiero recibir las 1500 actividades
         <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 6 · DEPOIMENTOS ═══════════ -->
+<!-- ═══════════ 8. TESTIMONIOS ═══════════ -->
 <section style="background:var(--muted)">
   <div class="dots"></div>
   <svg class="confetti" style="top:60px;right:8%;" width="40" height="40" viewBox="0 0 40 40"><rect x="4" y="4" width="32" height="32" rx="9" fill="#F472B6" stroke="#1E293B" stroke-width="2.5" transform="rotate(-12 20 20)"/></svg>
@@ -666,7 +732,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
   <div class="container">
     <div class="sec-head reveal">
       <span class="eyebrow">Testimonios</span>
-      <h2>Lo que dicen los profesionales que ya aplican las dinámicas</h2>
+      <h2>Lo que dicen quienes ya utilizan el material</h2>
     </div>
 
     <div class="marquee">
@@ -689,26 +755,60 @@ footer p{max-width:70ch;margin:0 auto 8px}
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 7 · PARA QUIÉN ═══════════ -->
+<!-- ═══════════ 9. PARA QUIÉN ═══════════ -->
 <section>
   <div class="container">
     <div class="panel-single">
       <div class="panel reveal">
         <h3>¿Para quién es <span style="background:linear-gradient(180deg,transparent 58%,var(--quaternary) 58%);padding:0 3px">indispensable</span> este material?</h3>
         <ul class="check-list">
-          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🩺 Fisioterapeutas y Kinesiólogos</strong>Para llegar a cada sesión sabiendo exactamente qué aplicar, con variedad para cada paciente y la seguridad de trabajar con dinámicas claras, progresivas y organizadas por objetivo.</span></li>
-          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🤝 Cuidadores de Adultos Mayores</strong>Aunque no tengas formación técnica: cada dinámica está explicada paso a paso para que mantengas a tu adulto mayor activo, estimulado y acompañado con total confianza.</span></li>
-          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🧑‍⚕️ Terapeutas Ocupacionales</strong>Para trabajar la autonomía, la motricidad fina y la estimulación cognitiva con dinámicas listas, pensadas para las actividades de la vida diaria.</span></li>
-          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🏃 Profesores de Educación Física</strong>Para dar clases a grupos de adultos mayores con dinámicas variadas, seguras y adaptadas a cada nivel, manteniendo a todos activos, motivados y con ganas de volver.</span></li>
-          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🏡 Residencias, Geriátricos y Centros de Día</strong>Para coordinadores y animadores que necesitan llenar la semana con actividades variadas, grupales y organizadas, sin repetir y sin improvisar.</span></li>
-          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>👨‍👩‍👧 Familiares que Cuidan en Casa</strong>Para quien cuida a su mamá, papá o abuelo y quiere verlo más activo, más lúcido y más independiente cada día.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🩺 Fisioterapeutas y Kinesiólogos</strong>Para llegar a cada sesión con variedad de actividades físicas y cognitivas, y fichas que puedes consultar por objetivo en segundos.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🤝 Cuidadores de Adultos Mayores</strong>Para organizar estímulos y actividades del día a día, con instrucciones paso a paso que facilitan acompañar sin improvisar.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🧑‍⚕️ Terapeutas Ocupacionales</strong>Para trabajar la autonomía, la motricidad fina y la estimulación cognitiva con actividades listas, pensadas para la vida diaria.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🏃 Profesores de Educación Física</strong>Para tener repertorio variado en clases individuales y grupales, adaptado a distintos niveles y objetivos.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🏡 Residencias, Geriátricos y Centros de Día</strong>Para planificar la rutina semanal con actividades variadas, grupales y organizadas, sin repetir y sin improvisar.</span></li>
+          <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>👨‍👩‍👧 Familiares que Cuidan en Casa</strong>Para acompañar y estimular a tu mamá, papá o abuelo en casa, con propuestas simples de aplicar día a día.</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 8 · OFERTA / CTA ═══════════ -->
+<!-- ═══════════ 10. OBJECIONES ═══════════ -->
+<section style="background:var(--muted)">
+  <div class="dots"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Antes de decidir</span>
+      <h2>Quizás estás pensando…</h2>
+    </div>
+
+    <div class="objection-grid">
+      <div class="objection-card reveal">
+        <h3>¿Ya tengo ejercicios y materiales parecidos?</h3>
+        <p>El valor está también en la organización: un repertorio amplio de actividades físicas, cognitivas y grupales, con fichas para consultar sin buscar en materiales dispersos.</p>
+      </div>
+      <div class="objection-card reveal">
+        <h3>¿Sirve para trabajar de forma individual y en grupo?</h3>
+        <p>Incluye propuestas individuales y dinámicas grupales. Elige según el objetivo, el contexto y las necesidades de quienes participan.</p>
+      </div>
+      <div class="objection-card reveal">
+        <h3>¿Y si trabajo con adultos mayores con movilidad reducida?</h3>
+        <p>Encontrarás actividades en silla y recursos de adaptación. Selecciona las propuestas según las posibilidades y limitaciones de cada persona.</p>
+      </div>
+      <div class="objection-card reveal">
+        <h3>¿Necesito conocimientos profesionales?</h3>
+        <p>Las instrucciones y las ilustraciones facilitan la consulta. La elección y adaptación de ejercicios debe respetar las necesidades del adulto mayor y, cuando corresponda, la orientación de un profesional de la salud.</p>
+      </div>
+      <div class="objection-card reveal">
+        <h3>¿Cómo me ayuda a ahorrar tiempo?</h3>
+        <p>Puedes partir de una actividad organizada, con su explicación y sus materiales, en lugar de preparar cada propuesta desde cero.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 11. OFERTA / CTA ═══════════ -->
 <section id="oferta">
   <div class="dots"></div>
   <div class="container">
@@ -720,28 +820,30 @@ footer p{max-width:70ch;margin:0 auto 8px}
     <div class="offer-card reveal">
       <span class="star-badge">🌟 Más Vendido</span>
 
-      <h3>+300 Dinámicas para Adultos Mayores<br>Todos los Bonos Exclusivos</h3>
+      <h3>1500 Actividades para Adultos Mayores</h3>
+      <p class="offer-complement">Material completo + bonos incluidos</p>
 
       <div class="reveal" style="margin-bottom:26px">
         <div class="real-mockup-wrap">
-          <img src="images/mockup29set.webp" alt="+300 Dinámicas para Adultos Mayores + Todos los Bonos Exclusivos" class="real-mockup" width="1100" height="825" loading="lazy">
+          <div class="framed-mockup">
+            <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores + bonos incluidos" class="real-mockup" width="1000" height="1500" loading="lazy">
+          </div>
         </div>
       </div>
 
       <ul class="offer-includes">
-        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> +300 dinámicas para adultos mayores, listas para aplicar</li>
-        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Organizadas en 12 categorías, 3 niveles de dificultad y por objetivo</li>
-        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Explicación paso a paso e ilustraciones en cada dinámica</li>
-        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Listas para imprimir o mostrar en pantalla</li>
-        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acceso inmediato desde el celular o la computadora</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> 1500 actividades para adultos mayores</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Actividades físicas, cognitivas y dinámicas grupales</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Organización por objetivo y nivel</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Fichas de ejercicios con instrucciones e ilustraciones</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Actividades imprimibles para trabajar en sesión</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Material para imprimir o consultar en pantalla</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acceso desde el celular o la computadora</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acceso de por vida</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Bonos incluidos</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Garantía de 7 días</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Actualizaciones mensuales</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Soporte prioritario</li>
-        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Garantía de 7 días</li>
-        <li><span class="gift-ico">🎁</span> Calendario de Sesiones Listas para 3 Meses</li>
-        <li><span class="gift-ico">🎁</span> Guía de Adaptaciones por Condición de Salud</li>
-        <li><span class="gift-ico">🎁</span> Guía de Evaluación Funcional del Adulto Mayor</li>
-        <li><span class="gift-ico">🎁</span> Informes de Evolución para Familias</li>
-        <li><span class="gift-ico">🎁</span> Kit para Conseguir Más Pacientes y Talleres</li>
       </ul>
 
       <hr class="divider-dash">
@@ -755,22 +857,22 @@ footer p{max-width:70ch;margin:0 auto 8px}
         <div class="price-note">⚠️ Puedes pagar en tu moneda local.</div>
 
         <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn btn-green btn-block" style="margin-top:24px" id="cta-principal">
-          Comprar ahora
+          Quiero recibir las 1500 actividades
           <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
 
         <div class="secure">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Pago 100% seguro
+          Pago seguro · Acceso digital · Garantía de 7 días
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 9 · GARANTÍA ═══════════ -->
+<!-- ═══════════ 12. GARANTÍA ═══════════ -->
 <section>
-  <svg class="confetti" style="top:70px;left:8%;" width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="19" r="16" fill="#8B5CF6" stroke="#1E293B" stroke-width="2.5"/></svg>
+  <svg class="confetti" style="top:70px;left:8%;" width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="19" r="16" fill="#2563EB" stroke="#1E293B" stroke-width="2.5"/></svg>
   <svg class="confetti" style="bottom:70px;right:8%;" width="42" height="42" viewBox="0 0 42 42"><polygon points="21,3 39,38 3,38" fill="#FBBF24" stroke="#1E293B" stroke-width="2.5" stroke-linejoin="round"/></svg>
 
   <div class="container">
@@ -779,7 +881,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
       </div>
       <h2>7 días de garantía</h2>
-      <p>Puedes comprar con total seguridad. Después de la confirmación tendrás 7 días para acceder a las +300 dinámicas, explorar cada categoría y, si sientes que no es lo que esperabas, solicitar el reembolso íntegro sin complicaciones.</p>
+      <p>Tienes 7 días para acceder al material, revisar las actividades y explorar los bonos. Si no es lo que esperabas, puedes solicitar el reembolso íntegro según las condiciones de la garantía.</p>
       <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn" id="cta-garantia">
         Comprar ahora
         <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
@@ -788,7 +890,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
   </div>
 </section>
 
-<!-- ═══════════ SECCIÓN 10 · FAQ ═══════════ -->
+<!-- ═══════════ 13. FAQ ═══════════ -->
 <section style="background:var(--muted)">
   <div class="dots"></div>
   <div class="container">
@@ -803,9 +905,18 @@ footer p{max-width:70ch;margin:0 auto 8px}
           <span class="faq-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </summary>
         <div class="faq-body">
-          <p>Tan pronto como tu pago sea confirmado, recibirás las +300 dinámicas y todos los bonos de forma automática en tu correo electrónico y también en tu WhatsApp.</p>
+          <p>Tan pronto como tu pago sea confirmado, recibirás las 1500 actividades y todos los bonos de forma automática en tu correo electrónico y también en tu WhatsApp.</p>
           <p>No necesitas enviar comprobantes ni hacer ningún paso adicional — nuestro sistema envía todo de manera inmediata y segura.</p>
           <p>Solo asegúrate de escribir correctamente tu correo y tu número de WhatsApp al momento de la compra.</p>
+        </div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Qué tipo de actividades incluye?
+          <span class="faq-plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </summary>
+        <div class="faq-body">
+          <p>Incluye ejercicios físicos, actividades cognitivas, propuestas para trabajar la autonomía y dinámicas grupales, organizadas por objetivo y nivel.</p>
         </div>
       </details>
 
@@ -815,7 +926,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         </summary>
         <div class="faq-body">
           <p>Es 100% digital. No se envía nada por correo postal y no pagas gastos de envío.</p>
-          <p>Recibes archivos que puedes ver desde tu celular, tablet o computadora, guardarlos donde prefieras e imprimirlos o mostrarlos en pantalla si te resulta más cómodo aplicar así las dinámicas.</p>
+          <p>Recibes archivos que puedes ver desde tu celular, tablet o computadora, guardarlos donde prefieras e imprimirlos o mostrarlos en pantalla si te resulta más cómodo aplicar así las actividades.</p>
         </div>
       </details>
 
@@ -835,7 +946,7 @@ footer p{max-width:70ch;margin:0 auto 8px}
         </summary>
         <div class="faq-body">
           <p>Para fisioterapeutas, kinesiólogos, terapeutas ocupacionales, profesores de educación física, cuidadores, residencias, geriátricos y centros de día, y también para familiares que cuidan a un adulto mayor en casa.</p>
-          <p>No necesitas formación técnica para aplicar las dinámicas: cada una viene con explicación paso a paso.</p>
+          <p>No necesitas formación técnica para aplicar las actividades: cada una viene con explicación paso a paso.</p>
         </div>
       </details>
 
@@ -852,18 +963,20 @@ footer p{max-width:70ch;margin:0 auto 8px}
 
     <div style="text-align:center;margin-top:44px" class="reveal">
       <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn" id="cta-final">
-        Quiero recibir los materiales
+        Quiero recibir las 1500 actividades
         <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ FOOTER ═══════════ -->
+<!-- ═══════════ 14. FOOTER ═══════════ -->
 <footer>
-  <strong>+300 Dinámicas para Adultos Mayores</strong>
-  <p>Este producto es 100% digital. Los resultados dependen de la dedicación y la constancia en la aplicación de las dinámicas.</p>
+  <strong>1500 Actividades para Adultos Mayores</strong>
+  <p>Material digital de apoyo para organizar actividades físicas, cognitivas y grupales con adultos mayores.</p>
+  <p>Este producto es 100% digital. Los resultados dependen de la dedicación y la constancia en la aplicación de las actividades.</p>
   <p>Este sitio no forma parte de Facebook ni de Meta Platforms, Inc.</p>
+  <p class="disclaimer">Este material no reemplaza la evaluación ni la orientación de un profesional de la salud.</p>
   <p style="margin-top:14px">&copy; 2026 · Todos los derechos reservados.</p>
 </footer>
 
@@ -897,6 +1010,100 @@ footer p{max-width:70ch;margin:0 auto 8px}
       });
     }
   });
+})();
+</script>
+
+<script>
+// Galería "Vista por dentro": carrusel con botones/swipe, contador y lightbox accesible.
+(function(){
+  var data = [
+    {src:'images/ficha-flexion-biceps.webp', alt:'Vista previa: Flexión de bíceps'},
+    {src:'images/ficha-brazo-pierna.webp', alt:'Vista previa: Brazo y pierna (coordinación)'},
+    {src:'images/ficha-rodar-palma.webp', alt:'Vista previa: Rodar en la palma (motricidad fina)'},
+    {src:'images/cog-laberinto.webp', alt:'Vista previa: ejercicio cognitivo de laberinto'},
+    {src:'images/cog-sopa-letras.webp', alt:'Vista previa: ejercicio cognitivo de sopa de letras'},
+    {src:'images/cog-ordenar-pasos.webp', alt:'Vista previa: ejercicio cognitivo de ordenar los pasos'}
+  ];
+
+  var track = document.getElementById('galleryTrack');
+  var counterEl = document.getElementById('gCounter');
+  var slides = track ? Array.prototype.slice.call(track.querySelectorAll('.g-slide')) : [];
+  var current = 0;
+
+  function updateCounter(i){
+    if(counterEl) counterEl.textContent = (i + 1) + ' / ' + data.length;
+  }
+
+  function scrollToIndex(i){
+    if(!slides[i]) return;
+    slides[i].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+    current = i;
+    updateCounter(i);
+  }
+
+  var prevBtn = document.getElementById('gPrev');
+  var nextBtn = document.getElementById('gNext');
+  if(prevBtn) prevBtn.addEventListener('click', function(){ scrollToIndex(Math.max(0, current - 1)); });
+  if(nextBtn) nextBtn.addEventListener('click', function(){ scrollToIndex(Math.min(data.length - 1, current + 1)); });
+
+  if(track && slides.length && 'IntersectionObserver' in window){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var idx = slides.indexOf(en.target);
+          if(idx > -1){ current = idx; updateCounter(idx); }
+        }
+      });
+    }, {root: track, threshold: .6});
+    slides.forEach(function(s){ io2.observe(s); });
+  }
+
+  // Lightbox
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbCounter = document.getElementById('lbCounter');
+  var lbClose = document.getElementById('lbClose');
+  var lbPrev = document.getElementById('lbPrev');
+  var lbNext = document.getElementById('lbNext');
+  var lbIndex = 0;
+  var lastFocused = null;
+
+  function renderLB(i){
+    lbIndex = (i + data.length) % data.length;
+    lbImg.src = data[lbIndex].src;
+    lbImg.alt = data[lbIndex].alt;
+    lbCounter.textContent = (lbIndex + 1) + ' / ' + data.length;
+  }
+  function openLightbox(i){
+    renderLB(i);
+    lastFocused = document.activeElement;
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+  function closeLightbox(){
+    lb.hidden = true;
+    document.body.style.overflow = '';
+    if(lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  }
+
+  slides.forEach(function(s, i){
+    s.addEventListener('click', function(){ openLightbox(i); });
+  });
+
+  if(lbClose) lbClose.addEventListener('click', closeLightbox);
+  if(lbPrev) lbPrev.addEventListener('click', function(){ renderLB(lbIndex - 1); });
+  if(lbNext) lbNext.addEventListener('click', function(){ renderLB(lbIndex + 1); });
+  if(lb) lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', function(e){
+    if(lb && !lb.hidden){
+      if(e.key === 'Escape') closeLightbox();
+      if(e.key === 'ArrowLeft') renderLB(lbIndex - 1);
+      if(e.key === 'ArrowRight') renderLB(lbIndex + 1);
+    }
+  });
+
+  updateCounter(0);
 })();
 </script>
 
