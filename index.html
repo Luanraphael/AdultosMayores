@@ -303,11 +303,24 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .bonus-banner{
   background:var(--brand-blue);color:#fff;border-radius:var(--r-lg);
   border:var(--bw) solid var(--foreground);
-  padding:26px 24px;text-align:center;margin-bottom:44px;
-  box-shadow:8px 8px 0 var(--secondary);
+  padding:40px 28px;text-align:center;margin-bottom:44px;
+  box-shadow:10px 10px 0 var(--secondary);
 }
-.bonus-banner .dates{color:var(--tertiary)}
-.bonus-banner h2{font-size:clamp(1.35rem,3vw,2rem);text-transform:uppercase}
+.bonus-dates-line{
+  font-family:"Outfit",sans-serif;font-weight:700;font-size:clamp(1rem,2.4vw,1.25rem);
+  letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;
+}
+.dates-pill{
+  display:inline-flex;align-items:center;
+  background:var(--tertiary);color:var(--foreground);
+  font-weight:800;font-size:clamp(1.5rem,4.2vw,2.25rem);line-height:1;
+  padding:6px 18px;border-radius:var(--r-full);
+  border:var(--bw) solid var(--foreground);
+  box-shadow:3px 3px 0 var(--foreground);
+  letter-spacing:.01em;
+}
+.bonus-banner h2{font-size:clamp(1.75rem,4.4vw,2.75rem);text-transform:uppercase}
 .bonus-banner h2 span{color:var(--tertiary)}
 .bonus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
 @media(max-width:820px){.bonus-grid{grid-template-columns:1fr}}
@@ -708,8 +721,8 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
   <div class="container">
 
     <div class="bonus-banner reveal">
-      <p class="font-head" style="font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px">
-        Comprando en los días <span class="dates">&gt; 4, 5 y 6 &lt;</span> de octubre recibes bonos exclusivos
+      <p class="bonus-dates-line">
+        Comprando en los días <span class="dates-pill">7, 8 y 9</span> de octubre recibes
       </p>
       <h2>Bonos <span>Exclusivos</span></h2>
       <p style="margin-top:16px;color:#E2E8F0;max-width:64ch;margin-left:auto;margin-right:auto;font-size:.9688rem">
