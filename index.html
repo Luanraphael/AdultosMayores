@@ -204,6 +204,8 @@ section{padding:72px 0;position:relative;overflow:hidden}
 @media(max-width:860px){.steps-grid{grid-template-columns:1fr}}
 .step-card{background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);padding:28px;text-align:center;box-shadow:5px 5px 0 var(--border)}
 .step-num{width:44px;height:44px;border-radius:50%;background:var(--num-blue);color:#fff;display:grid;place-items:center;margin:0 auto 14px;font-family:"Outfit",sans-serif;font-weight:800;font-size:1.125rem;border:var(--bw) solid var(--foreground)}
+.step-icon{display:block;width:120px;height:120px;max-width:100%;object-fit:contain;margin:0 auto 16px;border:0;background:none;box-shadow:none;filter:none}
+@media(max-width:600px){.step-icon{width:96px;height:96px}}
 .step-card h3{font-size:1.125rem;margin-bottom:8px}
 .step-card p{color:#475569;font-size:.9375rem}
 .steps-close{text-align:center;margin-top:28px;font-weight:700;font-family:"Outfit",sans-serif;font-size:1.0625rem}
@@ -501,16 +503,19 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
     <div class="steps-grid">
       <div class="step-card reveal">
         <div class="step-num">1</div>
+        <img src="images/icon-abre.webp" alt="" class="step-icon" width="360" height="360" loading="lazy">
         <h3>Abre</h3>
         <p>Accede al material organizado por objetivo y nivel.</p>
       </div>
       <div class="step-card reveal">
         <div class="step-num">2</div>
+        <img src="images/icon-elige.webp" alt="" class="step-icon" width="360" height="360" loading="lazy">
         <h3>Elige</h3>
         <p>Selecciona la actividad según lo que quieres trabajar y las necesidades del adulto mayor.</p>
       </div>
       <div class="step-card reveal">
         <div class="step-num">3</div>
+        <img src="images/icon-aplica.webp" alt="" class="step-icon" width="360" height="360" loading="lazy">
         <h3>Aplica</h3>
         <p>Consulta las instrucciones y las ilustraciones, e imprime la ficha o utilízala en pantalla.</p>
       </div>
