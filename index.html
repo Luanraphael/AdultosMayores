@@ -143,7 +143,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
 
 /* ============ HERO ============ */
-.hero{padding:44px 0 56px}
+.hero{padding:64px 0 80px}
 .hero-grid{display:grid;grid-template-columns:1fr;max-width:640px;margin:0 auto}
 .badge{
   display:inline-flex;align-items:center;gap:8px;
@@ -153,9 +153,11 @@ section{padding:72px 0;position:relative;overflow:hidden}
   text-transform:uppercase;letter-spacing:.04em;
   box-shadow:3px 3px 0 var(--foreground);
 }
-.hero h1{margin:18px 0 14px;line-height:1.02}
-.hero h1 .num-1500{display:block;font-size:clamp(3.25rem,13vw,5.5rem);color:var(--num-blue);line-height:.92;letter-spacing:-0.03em}
-.hero h1 .h1-line{display:block;font-size:clamp(1.5rem,4.6vw,2.5rem);color:var(--foreground)}
+.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);margin:22px 0 20px}
+.hero h1 .hl{
+  background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);
+  padding:0 4px;
+}
 .hero .support-line{font-family:"Outfit",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--num-blue);margin-bottom:6px}
 .hero p.lead{font-size:1.0625rem;color:#334155;max-width:56ch}
 .hero-list{list-style:none;margin:22px 0 26px;display:grid;gap:12px}
@@ -175,21 +177,17 @@ section{padding:72px 0;position:relative;overflow:hidden}
 @media(max-width:900px){
   .hero-grid{text-align:center}
   .hero p.lead{margin:0 auto}
-  .real-mockup-wrap{margin-left:auto;margin-right:auto}
   .hero-list{justify-items:start;max-width:380px;margin-left:auto;margin-right:auto}
   .hero .btn{width:100%}
 }
 
-/* ============ MOCKUP (borde + sombra) ============ */
-.real-mockup-wrap{display:flex;align-items:center;justify-content:center;margin:22px 0}
-.real-mockup{display:block;width:100%;height:auto;object-fit:contain}
-.framed-mockup{
-  background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-lg);
-  padding:18px;box-shadow:8px 8px 0 var(--border);
-  display:flex;align-items:center;justify-content:center;
+/* ============ MOCKUP (sin marco, solo imagen) ============ */
+.mockup-frame{width:100%;max-width:320px;margin:22px auto 0}
+.product-mockup{
+  display:block;width:auto;max-width:100%;height:auto;
+  margin-inline:auto;border:0;border-radius:10px;
+  box-shadow:0 8px 24px rgba(0,0,0,.14);
 }
-@media(max-width:600px){.framed-mockup{padding:14px;box-shadow:4px 4px 0 var(--border)}}
-.mockup-block{text-align:center}
 
 /* ============ SECTION HEADINGS ============ */
 .sec-head{text-align:center;max-width:820px;margin:0 auto 44px}
@@ -233,26 +231,39 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .highlight-note{text-align:center;font-size:1.125rem;font-weight:700;max-width:720px;margin:40px auto 0;font-family:"Outfit",sans-serif}
 .highlight-note .hl{background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);padding:0 4px}
 
-/* ============ FICHA EXPLAIN ============ */
-.ficha-explain{max-width:820px;margin:0 auto 44px;text-align:center}
-.ficha-explain h3{font-size:1.375rem;margin-bottom:14px}
-.ficha-explain>p{color:#475569;font-size:1rem;margin-bottom:20px}
-.ficha-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:18px}
-.ficha-chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-full);padding:8px 16px;font-family:"Outfit",sans-serif;font-weight:700;font-size:.875rem}
-.ficha-chip .dot2{width:8px;height:8px;border-radius:50%;background:var(--brand-blue)}
-.ficha-note{font-size:.9375rem;color:#475569;max-width:620px;margin:0 auto}
-
-/* ============ GALERÍA / CARRUSEL ============ */
-.gallery-wrap{position:relative;max-width:920px;margin:0 auto}
-.gallery-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:6px 4px;scrollbar-width:none}
-.gallery-track::-webkit-scrollbar{display:none}
-.g-slide{flex:0 0 auto;width:min(300px,76vw);scroll-snap-align:center;border:var(--bw) solid var(--foreground);border-radius:var(--r-md);overflow:hidden;padding:0;background:#fff;cursor:zoom-in;box-shadow:4px 4px 0 var(--border);display:block}
-.g-slide img{width:100%;height:auto;display:block}
-.g-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:var(--bw) solid var(--foreground);display:grid;place-items:center;font-size:1.3rem;cursor:pointer;box-shadow:3px 3px 0 var(--foreground);z-index:4}
-.g-prev{left:-10px}.g-next{right:-10px}
-@media(max-width:760px){.g-nav{display:none}}
-.gallery-counter{text-align:center;margin-top:16px;font-family:"Outfit",sans-serif;font-weight:700;color:var(--muted-fg);font-size:.9375rem}
-.gallery-hint{text-align:center;margin-top:6px;color:var(--muted-fg);font-size:.875rem}
+/* ============ VITRINA (coverflow con profundidad) ============ */
+.vitrine-wrap{position:relative;max-width:760px;margin:0 auto;padding:14px 18px 0}
+.vitrine{position:relative;height:clamp(300px,54vw,420px);touch-action:pan-y}
+.vit-card{
+  position:absolute;top:50%;left:50%;height:100%;width:auto;aspect-ratio:2/3;
+  transition:transform .9s cubic-bezier(.4,0,.2,1), opacity .9s ease, filter .9s ease;
+  cursor:pointer;
+}
+.vit-shadow{position:relative;height:100%;width:100%;border-radius:10px;transition:box-shadow .9s ease}
+.vit-card.is-active .vit-shadow{
+  box-shadow:0 16px 42px rgba(37,99,235,.22), 0 0 30px rgba(59,130,246,.16);
+}
+.vit-clip{position:relative;height:100%;width:100%;border-radius:10px;overflow:hidden;background:#fff}
+.vit-clip img{height:100%;width:100%;object-fit:contain;display:block}
+.vit-shine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 40%, rgba(255,255,255,.55) 50%, transparent 60%);transform:translateX(-120%);opacity:0}
+.vit-shine.play{animation:vitShine .85s ease forwards}
+@keyframes vitShine{
+  0%{transform:translateX(-120%);opacity:0}
+  15%{opacity:1}
+  100%{transform:translateX(120%);opacity:0}
+}
+.vit-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;border:var(--bw) solid var(--foreground);display:grid;place-items:center;font-size:1.3rem;cursor:pointer;box-shadow:3px 3px 0 var(--foreground);z-index:10}
+.vit-prev{left:0}.vit-next{right:0}
+@media(max-width:700px){.vit-nav{width:36px;height:36px;font-size:1.05rem}}
+.vit-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px}
+.vit-counter{font-family:"Outfit",sans-serif;font-weight:700;color:var(--muted-fg);font-size:.9375rem}
+.vit-pause{width:34px;height:34px;border-radius:50%;background:#fff;border:var(--bw) solid var(--foreground);display:grid;place-items:center;cursor:pointer;font-size:.9rem;line-height:1}
+.vit-pause[aria-pressed="true"]{background:var(--brand-blue);color:#fff}
+.gallery-hint{text-align:center;margin-top:8px;color:var(--muted-fg);font-size:.875rem}
+@media(prefers-reduced-motion:reduce){
+  .vit-card{transition:none}
+  .vit-shine{display:none}
+}
 
 .lightbox{position:fixed;inset:0;background:rgba(15,23,42,.92);z-index:200;display:flex;align-items:center;justify-content:center}
 .lightbox[hidden]{display:none}
@@ -324,12 +335,6 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .check-list .tick{margin-top:2px}
 .check-list strong{color:var(--foreground);font-family:"Outfit",sans-serif;font-weight:700;font-size:1rem;display:block;margin-bottom:3px}
 @media(max-width:600px){.panel{padding:24px;box-shadow:4px 4px 0 var(--border)}}
-
-/* ============ OBJECIONES ============ */
-.objection-grid{display:grid;gap:16px;max-width:820px;margin:0 auto}
-.objection-card{background:#fff;border:var(--bw) solid var(--foreground);border-radius:var(--r-md);padding:22px 24px;box-shadow:4px 4px 0 var(--border)}
-.objection-card h3{font-size:1.0625rem;margin-bottom:8px;color:var(--brand-blue)}
-.objection-card p{color:#475569;font-size:.9375rem}
 
 /* ============ OFERTA ============ */
 #oferta{background:var(--foreground);color:#fff}
@@ -452,15 +457,13 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
           FISIOTERAPEUTAS · T.O. · EDUCADORES FÍSICOS · CUIDADORES
         </span>
 
-        <h1><span class="num-1500">1500</span><span class="h1-line">Actividades para</span><span class="h1-line">Adultos Mayores</span></h1>
+        <h1><span class="hl">1500 Actividades</span> para Adultos Mayores</h1>
 
         <p class="lead">Ejercicios físicos, actividades cognitivas y dinámicas grupales, organizados por objetivo y nivel, con instrucciones paso a paso e ilustraciones. Abres, eliges y preparas tu sesión en minutos.</p>
         <p class="support-line">Deja de planificar cada sesión desde cero.</p>
 
-        <div class="real-mockup-wrap" style="max-width:320px">
-          <div class="framed-mockup">
-            <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="real-mockup" width="1000" height="1500" loading="eager">
-          </div>
+        <div class="mockup-frame">
+          <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup" width="1000" height="1500" loading="eager">
         </div>
 
         <ul class="hero-list">
@@ -603,7 +606,7 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
   </div>
 </section>
 
-<!-- ═══════════ 5-6. VISTA POR DENTRO: FICHAS + GALERÍA ═══════════ -->
+<!-- ═══════════ 5-6. ¿QUÉ VAS A RECIBIR? + VITRINA ═══════════ -->
 <section style="background:var(--muted)">
   <div class="dots"></div>
   <svg class="confetti" style="top:80px;left:5%;" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="#FBBF24" stroke="#1E293B" stroke-width="2.5"/></svg>
@@ -612,37 +615,56 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
   <div class="container">
     <div class="sec-head reveal">
       <span class="eyebrow">Vista por dentro</span>
-      <h2>Así se ve el material que vas a recibir</h2>
-      <p>Fichas ilustradas y actividades imprimibles para consultar, elegir y aplicar.</p>
+      <h2>¿Qué vas a recibir?</h2>
     </div>
 
-    <div class="ficha-explain reveal">
-      <h3>Cada ficha te ayuda a entender qué trabajar y cómo aplicarlo</h3>
-      <p>En las fichas de ejercicios encontrarás el objetivo, las indicaciones, las precauciones, los materiales y una secuencia ilustrada paso a paso.</p>
-      <div class="ficha-chips">
-        <span class="ficha-chip"><span class="dot2"></span>Objetivo</span>
-        <span class="ficha-chip"><span class="dot2"></span>Indicaciones</span>
-        <span class="ficha-chip"><span class="dot2"></span>Precauciones</span>
-        <span class="ficha-chip"><span class="dot2"></span>Materiales</span>
-        <span class="ficha-chip"><span class="dot2"></span>Paso a paso ilustrado</span>
+    <div class="reveal" style="margin-bottom:12px">
+      <div class="mockup-frame" style="max-width:300px">
+        <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup" width="1000" height="1500" loading="lazy">
       </div>
-      <p class="ficha-note">También encontrarás actividades cognitivas imprimibles, como laberintos, sopas de letras y tareas de secuenciación.</p>
     </div>
 
-    <div class="gallery-wrap reveal">
-      <div class="gallery-track" id="galleryTrack">
-        <button type="button" class="g-slide" data-idx="0"><img src="images/ficha-flexion-biceps.webp" alt="Vista previa: Flexión de bíceps" width="900" height="1350" loading="lazy"></button>
-        <button type="button" class="g-slide" data-idx="1"><img src="images/ficha-brazo-pierna.webp" alt="Vista previa: Brazo y pierna (coordinación)" width="900" height="1350" loading="lazy"></button>
-        <button type="button" class="g-slide" data-idx="2"><img src="images/ficha-rodar-palma.webp" alt="Vista previa: Rodar en la palma (motricidad fina)" width="900" height="1350" loading="lazy"></button>
-        <button type="button" class="g-slide" data-idx="3"><img src="images/cog-laberinto.webp" alt="Vista previa: ejercicio cognitivo de laberinto" width="900" height="1350" loading="lazy"></button>
-        <button type="button" class="g-slide" data-idx="4"><img src="images/cog-sopa-letras.webp" alt="Vista previa: ejercicio cognitivo de sopa de letras" width="900" height="1350" loading="lazy"></button>
-        <button type="button" class="g-slide" data-idx="5"><img src="images/cog-ordenar-pasos.webp" alt="Vista previa: ejercicio cognitivo de ordenar los pasos" width="900" height="1350" loading="lazy"></button>
+    <h3 class="reveal" style="text-align:center;font-size:1.375rem;margin:36px 0 28px">Así se ve el material que vas a recibir</h3>
+
+    <div class="vitrine-wrap reveal">
+      <div class="vitrine" id="vitrine">
+        <button type="button" class="vit-nav vit-prev" id="vPrev" aria-label="Página anterior">‹</button>
+        <div class="vit-card" data-idx="0" role="button" tabindex="0" aria-label="Vista previa: Flexión de bíceps">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/ficha-flexion-biceps.webp" alt="Vista previa: Flexión de bíceps" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="1" role="button" tabindex="0" aria-label="Vista previa: Brazo y pierna (coordinación)">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/ficha-brazo-pierna.webp" alt="Vista previa: Brazo y pierna (coordinación)" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="2" role="button" tabindex="0" aria-label="Vista previa: Rodar en la palma (motricidad fina)">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/ficha-rodar-palma.webp" alt="Vista previa: Rodar en la palma (motricidad fina)" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="3" role="button" tabindex="0" aria-label="Vista previa: ejercicio cognitivo de laberinto">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/cog-laberinto.webp" alt="Vista previa: ejercicio cognitivo de laberinto" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="4" role="button" tabindex="0" aria-label="Vista previa: ejercicio cognitivo de sopa de letras">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/cog-sopa-letras.webp" alt="Vista previa: ejercicio cognitivo de sopa de letras" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="5" role="button" tabindex="0" aria-label="Vista previa: ejercicio cognitivo de ordenar los pasos">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/cog-ordenar-pasos.webp" alt="Vista previa: ejercicio cognitivo de ordenar los pasos" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="6" role="button" tabindex="0" aria-label="Vista previa: Ponerse de pie desde el borde de la cama">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/ficha-ponerse-pie.webp" alt="Vista previa: Ponerse de pie desde el borde de la cama" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="7" role="button" tabindex="0" aria-label="Vista previa: Estiramiento del flexor de cadera">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/ficha-flexor-cadera.webp" alt="Vista previa: Estiramiento del flexor de cadera" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <div class="vit-card" data-idx="8" role="button" tabindex="0" aria-label="Vista previa: Bingo musical">
+          <div class="vit-shadow"><div class="vit-clip"><img src="images/ficha-bingo-musical.webp" alt="Vista previa: Bingo musical" width="900" height="1350" loading="lazy"><div class="vit-shine"></div></div></div>
+        </div>
+        <button type="button" class="vit-nav vit-next" id="vNext" aria-label="Página siguiente">›</button>
       </div>
-      <button type="button" class="g-nav g-prev" id="gPrev" aria-label="Página anterior">‹</button>
-      <button type="button" class="g-nav g-next" id="gNext" aria-label="Página siguiente">›</button>
+
+      <div class="vit-controls">
+        <button type="button" class="vit-pause" id="vPause" aria-pressed="false" aria-label="Pausar avance automático">⏸</button>
+        <div class="vit-counter" id="vCounter">1 / 9</div>
+      </div>
+      <p class="gallery-hint">Desliza para ver más · toca una página para ampliarla</p>
     </div>
-    <div class="gallery-counter" id="gCounter">1 / 6</div>
-    <p class="gallery-hint">Desliza para ver más · toca una página para ampliarla</p>
   </div>
 </section>
 
@@ -652,7 +674,7 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
   <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Página anterior">‹</button>
   <img class="lb-img" id="lbImg" src="" alt="">
   <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Página siguiente">›</button>
-  <div class="lb-counter" id="lbCounter">1 / 6</div>
+  <div class="lb-counter" id="lbCounter">1 / 9</div>
 </div>
 
 <!-- ═══════════ 7. BONOS ═══════════ -->
@@ -774,40 +796,6 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
   </div>
 </section>
 
-<!-- ═══════════ 10. OBJECIONES ═══════════ -->
-<section style="background:var(--muted)">
-  <div class="dots"></div>
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Antes de decidir</span>
-      <h2>Quizás estás pensando…</h2>
-    </div>
-
-    <div class="objection-grid">
-      <div class="objection-card reveal">
-        <h3>¿Ya tengo ejercicios y materiales parecidos?</h3>
-        <p>El valor está también en la organización: un repertorio amplio de actividades físicas, cognitivas y grupales, con fichas para consultar sin buscar en materiales dispersos.</p>
-      </div>
-      <div class="objection-card reveal">
-        <h3>¿Sirve para trabajar de forma individual y en grupo?</h3>
-        <p>Incluye propuestas individuales y dinámicas grupales. Elige según el objetivo, el contexto y las necesidades de quienes participan.</p>
-      </div>
-      <div class="objection-card reveal">
-        <h3>¿Y si trabajo con adultos mayores con movilidad reducida?</h3>
-        <p>Encontrarás actividades en silla y recursos de adaptación. Selecciona las propuestas según las posibilidades y limitaciones de cada persona.</p>
-      </div>
-      <div class="objection-card reveal">
-        <h3>¿Necesito conocimientos profesionales?</h3>
-        <p>Las instrucciones y las ilustraciones facilitan la consulta. La elección y adaptación de ejercicios debe respetar las necesidades del adulto mayor y, cuando corresponda, la orientación de un profesional de la salud.</p>
-      </div>
-      <div class="objection-card reveal">
-        <h3>¿Cómo me ayuda a ahorrar tiempo?</h3>
-        <p>Puedes partir de una actividad organizada, con su explicación y sus materiales, en lugar de preparar cada propuesta desde cero.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════ 11. OFERTA / CTA ═══════════ -->
 <section id="oferta">
   <div class="dots"></div>
@@ -824,10 +812,8 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
       <p class="offer-complement">Material completo + bonos incluidos</p>
 
       <div class="reveal" style="margin-bottom:26px">
-        <div class="real-mockup-wrap">
-          <div class="framed-mockup">
-            <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores + bonos incluidos" class="real-mockup" width="1000" height="1500" loading="lazy">
-          </div>
+        <div class="mockup-frame" style="max-width:300px">
+          <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores + bonos incluidos" class="product-mockup" width="1000" height="1500" loading="lazy">
         </div>
       </div>
 
@@ -1014,7 +1000,8 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
 </script>
 
 <script>
-// Galería "Vista por dentro": carrusel con botones/swipe, contador y lightbox accesible.
+// Vitrina "Así se ve el material": coverflow con profundidad, autoplay lento,
+// brillo de entrada, swipe, teclado, pausa y lightbox accesible.
 (function(){
   var data = [
     {src:'images/ficha-flexion-biceps.webp', alt:'Vista previa: Flexión de bíceps'},
@@ -1022,60 +1009,165 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
     {src:'images/ficha-rodar-palma.webp', alt:'Vista previa: Rodar en la palma (motricidad fina)'},
     {src:'images/cog-laberinto.webp', alt:'Vista previa: ejercicio cognitivo de laberinto'},
     {src:'images/cog-sopa-letras.webp', alt:'Vista previa: ejercicio cognitivo de sopa de letras'},
-    {src:'images/cog-ordenar-pasos.webp', alt:'Vista previa: ejercicio cognitivo de ordenar los pasos'}
+    {src:'images/cog-ordenar-pasos.webp', alt:'Vista previa: ejercicio cognitivo de ordenar los pasos'},
+    {src:'images/ficha-ponerse-pie.webp', alt:'Vista previa: Ponerse de pie desde el borde de la cama'},
+    {src:'images/ficha-flexor-cadera.webp', alt:'Vista previa: Estiramiento del flexor de cadera'},
+    {src:'images/ficha-bingo-musical.webp', alt:'Vista previa: Bingo musical'}
   ];
+  var N = data.length;
 
-  var track = document.getElementById('galleryTrack');
-  var counterEl = document.getElementById('gCounter');
-  var slides = track ? Array.prototype.slice.call(track.querySelectorAll('.g-slide')) : [];
+  var vitrine = document.getElementById('vitrine');
+  var wrap = vitrine ? vitrine.closest('.vitrine-wrap') : null;
+  var cards = vitrine ? Array.prototype.slice.call(vitrine.querySelectorAll('.vit-card')) : [];
+  var counterEl = document.getElementById('vCounter');
+  var pauseBtn = document.getElementById('vPause');
+  var prevBtn = document.getElementById('vPrev');
+  var nextBtn = document.getElementById('vNext');
+
+  if(!vitrine || !cards.length) return;
+
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var current = 0;
+  var isHover = false, isFocusWithin = false, isLightboxOpen = false,
+      isVisible = true, userPaused = false;
 
-  function updateCounter(i){
-    if(counterEl) counterEl.textContent = (i + 1) + ' / ' + data.length;
+  function shortestOffset(i, cur){
+    var raw = i - cur;
+    if(raw > N / 2) raw -= N;
+    if(raw < -N / 2) raw += N;
+    return raw;
   }
 
-  function scrollToIndex(i){
-    if(!slides[i]) return;
-    slides[i].scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
-    current = i;
-    updateCounter(i);
+  function layout(prevCurrent){
+    cards.forEach(function(card){
+      var idx = parseInt(card.getAttribute('data-idx'), 10);
+      var offset = shortestOffset(idx, current);
+      var abs = Math.abs(offset);
+      var tx, scale, opacity, blur, z, interactive;
+
+      if(abs === 0){ tx = 0; scale = 1; opacity = 1; blur = 0; z = 5; interactive = true; }
+      else if(abs === 1){ tx = offset * 62; scale = .76; opacity = .55; blur = 1; z = 4; interactive = true; }
+      else if(abs === 2){ tx = offset * 104; scale = .58; opacity = .22; blur = 2; z = 3; interactive = false; }
+      else { tx = offset * 140; scale = .46; opacity = 0; blur = 2; z = 0; interactive = false; }
+
+      card.style.transform = 'translate(-50%,-50%) translateX(' + tx + '%) scale(' + scale + ')';
+      card.style.opacity = opacity;
+      card.style.filter = blur ? 'blur(' + blur + 'px)' : 'none';
+      card.style.zIndex = z;
+      card.classList.toggle('is-active', abs === 0);
+      card.setAttribute('aria-hidden', abs === 0 ? 'false' : 'true');
+      card.tabIndex = interactive ? 0 : -1;
+    });
+
+    if(counterEl) counterEl.textContent = (current + 1) + ' / ' + N;
+
+    if(!reducedMotion && prevCurrent !== current){
+      var activeCard = cards[current];
+      var shine = activeCard ? activeCard.querySelector('.vit-shine') : null;
+      if(shine){
+        shine.classList.remove('play');
+        void shine.offsetWidth;
+        shine.classList.add('play');
+      }
+    }
   }
 
-  var prevBtn = document.getElementById('gPrev');
-  var nextBtn = document.getElementById('gNext');
-  if(prevBtn) prevBtn.addEventListener('click', function(){ scrollToIndex(Math.max(0, current - 1)); });
-  if(nextBtn) nextBtn.addEventListener('click', function(){ scrollToIndex(Math.min(data.length - 1, current + 1)); });
+  function goTo(i){
+    var prevCurrent = current;
+    current = ((i % N) + N) % N;
+    layout(prevCurrent);
+  }
+  function next(){ goTo(current + 1); }
+  function prev(){ goTo(current - 1); }
 
-  if(track && slides.length && 'IntersectionObserver' in window){
-    var io2 = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){
-          var idx = slides.indexOf(en.target);
-          if(idx > -1){ current = idx; updateCounter(idx); }
-        }
-      });
-    }, {root: track, threshold: .6});
-    slides.forEach(function(s){ io2.observe(s); });
+  if(prevBtn) prevBtn.addEventListener('click', prev);
+  if(nextBtn) nextBtn.addEventListener('click', next);
+
+  cards.forEach(function(card){
+    card.addEventListener('click', function(){
+      var idx = parseInt(card.getAttribute('data-idx'), 10);
+      if(idx === current){ openLightbox(idx); }
+      else { goTo(idx); }
+    });
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        var idx = parseInt(card.getAttribute('data-idx'), 10);
+        if(idx === current){ openLightbox(idx); } else { goTo(idx); }
+      }
+    });
+  });
+
+  if(wrap){
+    wrap.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); prev(); }
+      if(e.key === 'ArrowRight'){ e.preventDefault(); next(); }
+    });
+    wrap.addEventListener('mouseenter', function(){ isHover = true; });
+    wrap.addEventListener('mouseleave', function(){ isHover = false; });
+    wrap.addEventListener('focusin', function(){ isFocusWithin = true; });
+    wrap.addEventListener('focusout', function(){ isFocusWithin = false; });
   }
 
-  // Lightbox
+  // Swipe (pointer events)
+  var dragging = false, startX = 0, startY = 0, dx = 0, dy = 0;
+  vitrine.addEventListener('pointerdown', function(e){
+    dragging = true; startX = e.clientX; startY = e.clientY; dx = 0; dy = 0;
+  });
+  vitrine.addEventListener('pointermove', function(e){
+    if(!dragging) return;
+    dx = e.clientX - startX;
+    dy = e.clientY - startY;
+  });
+  function endDrag(){
+    if(!dragging) return;
+    dragging = false;
+    if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){
+      if(dx < 0) next(); else prev();
+    }
+  }
+  vitrine.addEventListener('pointerup', endDrag);
+  vitrine.addEventListener('pointercancel', function(){ dragging = false; });
+
+  // Pausa manual
+  if(pauseBtn){
+    pauseBtn.addEventListener('click', function(){
+      userPaused = !userPaused;
+      pauseBtn.setAttribute('aria-pressed', userPaused ? 'true' : 'false');
+      pauseBtn.setAttribute('aria-label', userPaused ? 'Reanudar avance automático' : 'Pausar avance automático');
+      pauseBtn.textContent = userPaused ? '▶' : '⏸';
+    });
+  }
+
+  // Visibilidad de la sección y de la pestaña
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ isVisible = en.isIntersecting; });
+    }, {threshold: .3});
+    io.observe(vitrine);
+  }
+  document.addEventListener('visibilitychange', function(){
+    isVisible = isVisible && document.visibilityState === 'visible';
+  });
+
+  // Lightbox (compartido con el resto de la página)
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lbImg');
   var lbCounter = document.getElementById('lbCounter');
   var lbClose = document.getElementById('lbClose');
   var lbPrev = document.getElementById('lbPrev');
   var lbNext = document.getElementById('lbNext');
-  var lbIndex = 0;
   var lastFocused = null;
 
   function renderLB(i){
-    lbIndex = (i + data.length) % data.length;
-    lbImg.src = data[lbIndex].src;
-    lbImg.alt = data[lbIndex].alt;
-    lbCounter.textContent = (lbIndex + 1) + ' / ' + data.length;
+    current = ((i % N) + N) % N;
+    lbImg.src = data[current].src;
+    lbImg.alt = data[current].alt;
+    if(lbCounter) lbCounter.textContent = (current + 1) + ' / ' + N;
   }
   function openLightbox(i){
     renderLB(i);
+    isLightboxOpen = true;
     lastFocused = document.activeElement;
     lb.hidden = false;
     document.body.style.overflow = 'hidden';
@@ -1083,27 +1175,37 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
   }
   function closeLightbox(){
     lb.hidden = true;
+    isLightboxOpen = false;
     document.body.style.overflow = '';
+    layout(current);
     if(lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
   }
 
-  slides.forEach(function(s, i){
-    s.addEventListener('click', function(){ openLightbox(i); });
-  });
-
   if(lbClose) lbClose.addEventListener('click', closeLightbox);
-  if(lbPrev) lbPrev.addEventListener('click', function(){ renderLB(lbIndex - 1); });
-  if(lbNext) lbNext.addEventListener('click', function(){ renderLB(lbIndex + 1); });
+  if(lbPrev) lbPrev.addEventListener('click', function(){ renderLB(current - 1); });
+  if(lbNext) lbNext.addEventListener('click', function(){ renderLB(current + 1); });
   if(lb) lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
   document.addEventListener('keydown', function(e){
     if(lb && !lb.hidden){
       if(e.key === 'Escape') closeLightbox();
-      if(e.key === 'ArrowLeft') renderLB(lbIndex - 1);
-      if(e.key === 'ArrowRight') renderLB(lbIndex + 1);
+      if(e.key === 'ArrowLeft') renderLB(current - 1);
+      if(e.key === 'ArrowRight') renderLB(current + 1);
     }
   });
 
-  updateCounter(0);
+  // Avance automático lento (pausa en hover/foco/lightbox/oculto/reduced-motion)
+  if(!reducedMotion){
+    setInterval(function(){
+      if(!isHover && !isFocusWithin && !isLightboxOpen && isVisible && !userPaused){
+        next();
+      }
+    }, 5000);
+  } else if(pauseBtn){
+    pauseBtn.disabled = true;
+    pauseBtn.style.display = 'none';
+  }
+
+  layout(current);
 })();
 </script>
 
