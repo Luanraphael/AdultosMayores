@@ -131,16 +131,18 @@ section{padding:72px 0;position:relative;overflow:hidden}
 
 /* ============ TOP BAR ============ */
 .topbar{
-  background:var(--secondary);
+  background:#DC2626;
   border-bottom:var(--bw) solid var(--foreground);
-  color:var(--foreground);
+  color:#fff;
   font-family:"Outfit",sans-serif;font-weight:800;
   text-align:center;padding:11px 16px;font-size:.95rem;
   position:sticky;top:0;z-index:60;
   text-transform:uppercase;letter-spacing:.02em;
+  animation:topbarBlink 1.8s ease-in-out infinite;
 }
-.topbar .pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--foreground);margin-right:8px;animation:pulse 1.4s infinite}
+.topbar .pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;margin-right:8px;animation:pulse 1.4s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+@keyframes topbarBlink{0%,100%{opacity:1}50%{opacity:.82}}
 
 /* ============ HERO ============ */
 .hero{padding:64px 0 80px}
@@ -156,6 +158,10 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .hero h1{font-size:clamp(2.8rem,11vw,4.25rem);margin:22px 0 20px}
 .hero h1 .hl{
   background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);
+  padding:0 4px;
+}
+.hero h1 .hl-blue{
+  background:linear-gradient(180deg,transparent 58%, var(--num-blue) 58%);
   padding:0 4px;
 }
 .hero .support-line{font-family:"Outfit",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--num-blue);margin-bottom:6px}
@@ -479,7 +485,7 @@ footer .disclaimer{margin-top:14px;color:#64748B;font-size:.75rem}
           FISIOTERAPEUTAS · T.O. · EDUCADORES FÍSICOS · CUIDADORES
         </span>
 
-        <h1><span class="hl">1500 Actividades</span> físicas, cognitivas y grupales para Adultos Mayores</h1>
+        <h1><span class="hl">1500 Actividades</span> físicas, cognitivas y grupales para <span class="hl-blue">Adultos Mayores</span></h1>
 
         <p class="lead">Ejercicios físicos, actividades cognitivas y dinámicas grupales, organizados por objetivo y nivel, con instrucciones paso a paso e ilustraciones. Abres, eliges y preparas tu sesión en minutos.</p>
         <p class="support-line">Deja de planificar cada sesión desde cero.</p>
