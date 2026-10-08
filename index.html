@@ -141,19 +141,19 @@ section{padding:72px 0;position:relative;overflow:hidden}
   text-transform:uppercase;letter-spacing:.01em;text-decoration:none;
   padding:16px 30px;min-height:56px;
   border:0;border-radius:var(--r-btn);
-  background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;cursor:pointer;
+  background:linear-gradient(135deg,#34D399,#059669);color:#fff;cursor:pointer;
   box-shadow:var(--clay-btn);
   transition:transform .3s var(--bounce),box-shadow .3s var(--bounce);
   text-align:center;
 }
 .btn:hover{transform:translateY(-4px);box-shadow:var(--clay-btn-hover)}
 .btn:active{transform:scale(.92);box-shadow:var(--clay-pressed)}
-.btn:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(124,58,237,.35),var(--clay-btn)}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(16,185,129,.35),var(--clay-btn)}
 .btn .arrow{
   width:32px;height:32px;flex:0 0 32px;border-radius:50%;background:rgba(255,255,255,.22);
   display:grid;place-items:center;color:#fff;
 }
-.btn-green{background:linear-gradient(135deg,#10B981,#10B981);color:#fff}
+.btn-green{background:linear-gradient(135deg,#34D399,#059669);color:#fff}
 .btn-block{display:flex;width:100%}
 @media(max-width:520px){.btn{font-size:.9375rem;padding:14px 20px;gap:10px;min-height:52px}}
 
@@ -236,6 +236,10 @@ section{padding:72px 0;position:relative;overflow:hidden}
   display:block;width:auto;max-width:100%;height:auto;
   margin-inline:auto;border:0;border-radius:10px;
   box-shadow:0 24px 60px rgba(124,58,237,.18), 0 10px 24px rgba(51,47,58,.14);
+}
+.product-mockup-plain{
+  display:block;width:auto;max-width:100%;height:auto;
+  margin-inline:auto;border:0;border-radius:0;box-shadow:none;background:none;
 }
 
 /* ============ SECTION HEADINGS ============ */
@@ -417,7 +421,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .offer-card{
   max-width:640px;margin:0 auto;background:#fff;color:var(--foreground);
   border:1px solid var(--tertiary);border-radius:var(--r-xl);
-  padding:36px;box-shadow:0 18px 40px rgba(245,158,11,.14),0 4px 14px rgba(124,58,237,.08);position:relative;
+  padding:36px;box-shadow:0 6px 18px rgba(124,58,237,.06);position:relative;
 }
 .star-badge{
   position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-4deg);
@@ -442,7 +446,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
 }
 .price-main{
   font-family:"Nunito",sans-serif;font-weight:900;font-size:clamp(3rem,9vw,4.25rem);line-height:1;
-  background:linear-gradient(135deg,var(--accent),var(--secondary));
+  background:linear-gradient(135deg,#34D399,#059669);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .price-inst{font-weight:700;margin-top:8px}
@@ -539,18 +543,13 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
   <div class="container">
     <div class="hero-grid">
       <div class="reveal">
-        <span class="badge">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6z"/></svg>
-          FISIOTERAPEUTAS · T.O. · EDUCADORES FÍSICOS · CUIDADORES
-        </span>
-
         <h1><span class="grad-text">1500</span> Actividades físicas, cognitivas y grupales para <span class="grad-text">Adultos Mayores</span></h1>
 
         <p class="lead">Ejercicios físicos, actividades cognitivas y dinámicas grupales, organizados por objetivo y nivel, con instrucciones paso a paso e ilustraciones. Abres, eliges y preparas tu sesión en minutos.</p>
         <p class="support-line">Deja de planificar cada sesión desde cero.</p>
 
         <div class="mockup-frame">
-          <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup" width="1000" height="1500" loading="eager">
+          <img src="images/mockup-hero-new.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup-plain" width="1100" height="1100" loading="eager">
         </div>
 
         <ul class="hero-list">
@@ -699,7 +698,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
     <div class="reveal" style="margin-bottom:12px">
       <div class="mockup-frame" style="max-width:300px">
-        <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup" width="1000" height="1500" loading="lazy">
+        <img src="images/mockup-hero-new.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup-plain" width="1100" height="1100" loading="lazy">
       </div>
     </div>
 
@@ -788,7 +787,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bono 01</span>
         <h3>Guía de Evaluación Funcional del Adulto Mayor</h3>
-        <div class="bonus-img-wrap"><img src="images/bono1.webp" alt="Guía de Evaluación Funcional del Adulto Mayor" width="900" height="1038" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono1.webp" alt="Guía de Evaluación Funcional del Adulto Mayor" width="900" height="1225" loading="lazy"></div>
         <p style="color:#635F69;font-size:.9375rem;margin-top:8px">Sabrás en qué punto está tu adulto mayor desde el primer día: su equilibrio, su fuerza, su movilidad y sus limitaciones, medidos con pruebas simples y claras. Con fichas listas para registrar cada evaluación y ver, mes a mes, cómo avanza.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -799,7 +798,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bono 02</span>
         <h3>Guía de Adaptaciones por Condición de Salud</h3>
-        <div class="bonus-img-wrap"><img src="images/bono2.webp" alt="Guía de Adaptaciones por Condición de Salud" width="900" height="1350" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono2.webp" alt="Guía de Adaptaciones por Condición de Salud" width="900" height="1225" loading="lazy"></div>
         <p style="color:#635F69;font-size:.9375rem;margin-top:8px">Te orienta cómo adaptar cada actividad a la condición de tu adulto mayor: qué cuidar, qué evitar y cuáles son las señales de alerta para detenerte a tiempo. Un apoyo para decidir con más criterio, sin reemplazar la valoración profesional cuando corresponda.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -810,7 +809,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bono 03</span>
         <h3>Informes de Evolución para Familias</h3>
-        <div class="bonus-img-wrap"><img src="images/bono4.webp" alt="Informes de Evolución para Familias" width="900" height="984" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono4.webp" alt="Informes de Evolución para Familias" width="900" height="1225" loading="lazy"></div>
         <p style="color:#635F69;font-size:.9375rem;margin-top:8px">Muestra a cada familia, de forma clara y profesional, todo lo que tu adulto mayor ha avanzado contigo. Informes listos para completar y enviar, que transmiten confianza y respaldan tu trabajo.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -821,7 +820,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bono 04</span>
         <h3>+100 Ejercicios · Movilidad Reducida</h3>
-        <div class="bonus-img-wrap"><img src="images/bono5.webp" alt="+100 Ejercicios · Movilidad Reducida" width="900" height="1350" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono5.webp" alt="+100 Ejercicios · Movilidad Reducida" width="900" height="1225" loading="lazy"></div>
         <p style="color:#635F69;font-size:.9375rem;margin-top:8px">Más de 100 ejercicios adaptados para adultos mayores con movilidad reducida, con opciones para realizar en silla. Amplía tu repertorio y elige actividades según las capacidades y necesidades de cada persona.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -832,7 +831,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bono 05</span>
         <h3>Armador de Sesiones</h3>
-        <div class="bonus-img-wrap"><img src="images/bono6.webp" alt="Armador de Sesiones" width="900" height="1350" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono6.webp" alt="Armador de Sesiones" width="900" height="1225" loading="lazy"></div>
         <p style="color:#635F69;font-size:.9375rem;margin-top:8px">Plantillas para organizar sesiones por objetivo y nivel, combinando calentamiento, fuerza, movilidad, equilibrio y relajación. Elige las actividades del material y reúne tu sesión en un plan claro, sin empezar desde cero.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>

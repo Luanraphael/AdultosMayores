@@ -141,19 +141,19 @@ section{padding:72px 0;position:relative;overflow:hidden}
   text-transform:uppercase;letter-spacing:.01em;text-decoration:none;
   padding:16px 30px;min-height:56px;
   border:0;border-radius:var(--r-btn);
-  background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;cursor:pointer;
+  background:linear-gradient(135deg,#34D399,#059669);color:#fff;cursor:pointer;
   box-shadow:var(--clay-btn);
   transition:transform .3s var(--bounce),box-shadow .3s var(--bounce);
   text-align:center;
 }
 .btn:hover{transform:translateY(-4px);box-shadow:var(--clay-btn-hover)}
 .btn:active{transform:scale(.92);box-shadow:var(--clay-pressed)}
-.btn:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(124,58,237,.35),var(--clay-btn)}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(16,185,129,.35),var(--clay-btn)}
 .btn .arrow{
   width:32px;height:32px;flex:0 0 32px;border-radius:50%;background:rgba(255,255,255,.22);
   display:grid;place-items:center;color:#fff;
 }
-.btn-green{background:linear-gradient(135deg,#10B981,#10B981);color:#fff}
+.btn-green{background:linear-gradient(135deg,#34D399,#059669);color:#fff}
 .btn-block{display:flex;width:100%}
 @media(max-width:520px){.btn{font-size:.9375rem;padding:14px 20px;gap:10px;min-height:52px}}
 
@@ -236,6 +236,10 @@ section{padding:72px 0;position:relative;overflow:hidden}
   display:block;width:auto;max-width:100%;height:auto;
   margin-inline:auto;border:0;border-radius:10px;
   box-shadow:0 24px 60px rgba(124,58,237,.18), 0 10px 24px rgba(51,47,58,.14);
+}
+.product-mockup-plain{
+  display:block;width:auto;max-width:100%;height:auto;
+  margin-inline:auto;border:0;border-radius:0;box-shadow:none;background:none;
 }
 
 /* ============ SECTION HEADINGS ============ */
@@ -417,7 +421,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .offer-card{
   max-width:640px;margin:0 auto;background:#fff;color:var(--foreground);
   border:1px solid var(--tertiary);border-radius:var(--r-xl);
-  padding:36px;box-shadow:0 18px 40px rgba(245,158,11,.14),0 4px 14px rgba(124,58,237,.08);position:relative;
+  padding:36px;box-shadow:0 6px 18px rgba(124,58,237,.06);position:relative;
 }
 .star-badge{
   position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-4deg);
@@ -442,7 +446,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
 }
 .price-main{
   font-family:"Nunito",sans-serif;font-weight:900;font-size:clamp(3rem,9vw,4.25rem);line-height:1;
-  background:linear-gradient(135deg,var(--accent),var(--secondary));
+  background:linear-gradient(135deg,#34D399,#059669);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .price-inst{font-weight:700;margin-top:8px}
@@ -552,18 +556,13 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
   <div class="container">
     <div class="hero-grid">
       <div class="reveal">
-        <span class="badge">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4-6.2-4.6-6.2 4.6 2.4-7.4L2 9.4h7.6z"/></svg>
-          FISIOTERAPEUTAS · TERAPEUTAS OCUPACIONAIS · PROFISSIONAIS DE EDUCAÇÃO FÍSICA · CUIDADORES
-        </span>
-
         <h1><span class="grad-text">1500 atividades</span> físicas, cognitivas e grupais adaptadas para <span class="grad-text">idosos</span></h1>
 
         <p class="lead">Exercícios físicos, atividades cognitivas e dinâmicas em grupo, organizados por objetivo e nível, com instruções passo a passo e ilustrações. Abra, escolha e prepare sua sessão em minutos.</p>
         <p class="support-line">Pare de planejar cada sessão do zero.</p>
 
         <div class="mockup-frame">
-          <img src="images/mockup1500.webp" alt="1500 Atividades para Idosos" class="product-mockup" width="1000" height="1500" loading="eager">
+          <img src="images/mockup-hero-new.webp" alt="1500 Atividades para Idosos" class="product-mockup-plain" width="1100" height="1100" loading="eager">
         </div>
 
         <ul class="hero-list">
@@ -712,7 +711,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
     <div class="reveal" style="margin-bottom:12px">
       <div class="mockup-frame" style="max-width:300px">
-        <img src="images/mockup1500.webp" alt="1500 Atividades para Idosos" class="product-mockup" width="1000" height="1500" loading="lazy">
+        <img src="images/mockup-hero-new.webp" alt="1500 Atividades para Idosos" class="product-mockup-plain" width="1100" height="1100" loading="lazy">
       </div>
     </div>
 
@@ -801,7 +800,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bônus 01</span>
         <h3>Guia de Avaliação Funcional do Idoso</h3>
-        <div class="bonus-img-wrap"><img src="images/bono1.webp" alt="Guia de Avaliação Funcional do Idoso" width="900" height="1037" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono1.webp" alt="Guia de Avaliação Funcional do Idoso" width="900" height="1225" loading="lazy"></div>
         <p style="color:#475569;font-size:.9375rem;margin-top:8px">Você vai saber em que ponto seu idoso está desde o primeiro dia: seu equilíbrio, sua força, sua mobilidade e suas limitações, medidos com testes simples e claros. Com fichas prontas para registrar cada avaliação e ver, mês a mês, como ele evolui.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -812,7 +811,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bônus 02</span>
         <h3>Guia de Adaptações por Condição de Saúde</h3>
-        <div class="bonus-img-wrap"><img src="images/bono2.webp" alt="Guia de Adaptações por Condição de Saúde" width="900" height="1350" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono2.webp" alt="Guia de Adaptações por Condição de Saúde" width="900" height="1225" loading="lazy"></div>
         <p style="color:#475569;font-size:.9375rem;margin-top:8px">Orienta como adaptar cada atividade à condição do seu idoso: o que cuidar, o que evitar e quais são os sinais de alerta para parar a tempo. Um apoio para decidir com mais critério, sem substituir a avaliação profissional quando necessário.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -823,7 +822,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bônus 03</span>
         <h3>Relatórios de Evolução para Famílias</h3>
-        <div class="bonus-img-wrap"><img src="images/bono4.webp" alt="Relatórios de Evolução para Famílias" width="900" height="984" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono4.webp" alt="Relatórios de Evolução para Famílias" width="900" height="1225" loading="lazy"></div>
         <p style="color:#475569;font-size:.9375rem;margin-top:8px">Mostra a cada família, de forma clara e profissional, tudo o que o seu idoso avançou com você. Relatórios prontos para preencher e enviar, que transmitem confiança e respaldam seu trabalho.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -834,7 +833,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bônus 04</span>
         <h3>+100 Exercícios · Mobilidade Reduzida</h3>
-        <div class="bonus-img-wrap"><img src="images/bono5.webp" alt="+100 Exercícios · Mobilidade Reduzida" width="900" height="1350" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono5.webp" alt="+100 Exercícios · Mobilidade Reduzida" width="900" height="1225" loading="lazy"></div>
         <p style="color:#475569;font-size:.9375rem;margin-top:8px">Mais de 100 exercícios adaptados para idosos com mobilidade reduzida, com opções para realizar sentado. Amplie seu repertório e escolha atividades de acordo com as capacidades e necessidades de cada pessoa.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -845,7 +844,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <div class="card bonus-card reveal">
         <span class="bonus-tag">Bônus 05</span>
         <h3>Montador de Sessões</h3>
-        <div class="bonus-img-wrap"><img src="images/bono6.webp" alt="Montador de Sessões" width="900" height="1350" loading="lazy"></div>
+        <div class="bonus-img-wrap"><img src="images/bono6.webp" alt="Montador de Sessões" width="900" height="1225" loading="lazy"></div>
         <p style="color:#475569;font-size:.9375rem;margin-top:8px">Modelos para organizar sessões por objetivo e nível, combinando aquecimento, força, mobilidade, equilíbrio e relaxamento. Escolha as atividades do material e monte sua sessão em um plano claro, sem começar do zero.</p>
         <div class="price-row">
           <span class="price-old">DE $19,90</span>
@@ -923,9 +922,9 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
     </div>
 
     <div class="offer-card reveal">
-      <span class="star-badge">MELHOR CUSTO-BENEFÍCIO</span>
+      <span class="star-badge">KIT PREMIUM</span>
 
-      <h3>Kit Premium — Material Completo</h3>
+      <h3>Material Completo</h3>
       <p class="offer-complement">Material completo + bônus incluídos</p>
 
       <div class="reveal" style="margin-bottom:26px">
@@ -945,7 +944,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <li><span class="gift-ico">🎁</span> Guia de Avaliação Funcional do Idoso</li>
         <li><span class="gift-ico">🎁</span> Guia de Adaptações por Condição de Saúde</li>
         <li><span class="gift-ico">🎁</span> Relatórios de Evolução para Famílias</li>
-        <li><span class="gift-ico">🎁</span> +100 Exercícios — Mobilidade Reduzida</li>
+        <li><span class="gift-ico">🎁</span> +100 Exercícios · Mobilidade Reduzida</li>
         <li><span class="gift-ico">🎁</span> Montador de Sessões</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Atualizações mensais</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Suporte prioritário</li>
@@ -972,7 +971,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
     </div>
 
     <div class="offer-card offer-basic reveal">
-      <h3>Kit Básico — Acesso Essencial</h3>
+      <h3>Kit Básico</h3>
 
       <ul class="offer-includes">
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> +500 atividades físicas, cognitivas e grupais adaptadas para idosos</li>
@@ -987,7 +986,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Guia de Avaliação Funcional do Idoso</li>
         <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Guia de Adaptações por Condição de Saúde</li>
         <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Relatórios de Evolução para Famílias</li>
-        <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> +100 Exercícios — Mobilidade Reduzida</li>
+        <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> +100 Exercícios · Mobilidade Reduzida</li>
         <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Montador de Sessões</li>
         <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Acesso vitalício</li>
         <li><span class="cross"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> Garantia de 30 dias</li>
@@ -1025,7 +1024,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       </div>
       <h2>Garantia de 7 dias no Básico e 30 dias no Premium</h2>
       <p>Você tem 7 dias de garantia no Kit Básico e 30 dias no Kit Premium para acessar o material e decidir com calma. Se não for o que você esperava, pode solicitar o reembolso integral de acordo com as condições do plano escolhido.</p>
-      <a href="#oferta" class="btn">
+      <a href="https://payfast.greenn.com.br/redirect/794052" class="btn" id="cta-garantia">
         Comprar agora
         <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
@@ -1141,10 +1140,10 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
 <script>
 // Evento InitiateCheckout somente nos botões de checkout real
-// (CTA do Kit Premium e CTA do Kit Básico).
+// (CTA do Kit Premium, CTA do Kit Básico e CTA da seção de garantia).
 // Os demais botões são âncoras para a seção de oferta, não disparam o evento.
 (function(){
-  var ids = ['cta-principal', 'cta-basico'];
+  var ids = ['cta-principal', 'cta-basico', 'cta-garantia'];
   ids.forEach(function(id){
     var el = document.getElementById(id);
     if(el){
