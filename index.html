@@ -116,29 +116,23 @@ h1,h2,h3,h4,.font-head{font-family:"Nunito",system-ui,sans-serif;font-weight:800
 
 /* ============ AMBIENT LIGHT LAYER ============ */
 .ambient-bg{position:fixed;inset:0;overflow:hidden;pointer-events:none}
-.amb-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.1;will-change:transform;animation:ambDrift ease-in-out infinite alternate}
-.amb-1{width:520px;height:520px;background:#7C3AED;top:-140px;left:-120px;animation-duration:11s}
-.amb-2{width:460px;height:460px;background:#DB2777;top:26%;right:-160px;animation-duration:9.5s;animation-delay:-3s}
-.amb-3{width:440px;height:440px;background:#0EA5E9;bottom:-120px;left:8%;animation-duration:12s;animation-delay:-5s}
-.amb-4{width:380px;height:380px;background:#F59E0B;bottom:8%;right:12%;animation-duration:10s;animation-delay:-2s}
-@keyframes ambDrift{0%{transform:translate(0,0) scale(1)}100%{transform:translate(34px,-24px) scale(1.08)}}
-@media(max-width:768px){.amb-blob{filter:blur(46px);opacity:.09}}
+.amb-blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.07;will-change:transform;animation:ambDrift ease-in-out infinite alternate;background:#7C3AED}
+.amb-1{width:560px;height:560px;top:-160px;left:-140px;animation-duration:12s}
+.amb-2{width:480px;height:480px;background:#DB2777;top:30%;right:-180px;animation-duration:10s;animation-delay:-3s;opacity:.05}
+.amb-3{width:460px;height:460px;bottom:-140px;left:4%;animation-duration:13s;animation-delay:-5s}
+.amb-4{width:400px;height:400px;background:#0EA5E9;bottom:10%;right:10%;animation-duration:11s;animation-delay:-2s;opacity:.05}
+@keyframes ambDrift{0%{transform:translate(0,0) scale(1)}100%{transform:translate(30px,-22px) scale(1.06)}}
+@media(max-width:768px){.amb-blob{filter:blur(56px);opacity:.05}}
 
 /* ============ LAYOUT ============ */
 .container{max-width:var(--container);margin:0 auto;padding:0 20px;position:relative;z-index:2}
 section{padding:72px 0;position:relative;overflow:hidden}
 @media(max-width:768px){section{padding:48px 0}}
 
-/* ============ DECOR ============ */
-.dots{
-  position:absolute;inset:0;pointer-events:none;
-  background-image:radial-gradient(circle, rgba(124,58,237,.1) 1.5px, transparent 1.6px);
-  background-size:24px 24px;
-  z-index:0;
-}
-.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0;filter:blur(2px)}
-.confetti{position:absolute;pointer-events:none;z-index:1;opacity:.5}
-@media(max-width:768px){.confetti,.blob-hide{display:none}}
+/* ============ DECOR (desactivado: el acabado clay usa solo la luz ambiente) ============ */
+.dots{display:none}
+.blob{display:none}
+.confetti{display:none}
 
 /* ============ BUTTONS ============ */
 .btn{
@@ -189,7 +183,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
   position:sticky;top:0;z-index:60;
   text-transform:uppercase;letter-spacing:.02em;
   animation:topbarBlink 1.8s ease-in-out infinite;
-  box-shadow:0 8px 24px rgba(220,38,38,.25);
+  box-shadow:0 2px 0 rgba(0,0,0,.04);
 }
 .topbar .pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;margin-right:8px;animation:pulse 1.4s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
@@ -197,27 +191,26 @@ section{padding:72px 0;position:relative;overflow:hidden}
 
 /* ============ HERO ============ */
 .hero{padding:64px 0 80px}
-.hero-grid{display:grid;grid-template-columns:1fr;max-width:640px;margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr;max-width:640px;margin:0 auto;text-align:left}
 .badge{
   display:inline-flex;align-items:center;gap:8px;
-  background:linear-gradient(135deg,#FCD34D,var(--tertiary));border:0;
+  background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.8);
   border-radius:var(--r-full);padding:9px 18px;
   font-family:"Nunito",sans-serif;font-weight:800;font-size:.8125rem;
-  text-transform:uppercase;letter-spacing:.04em;color:#3D2E00;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--accent);
   box-shadow:var(--clay-card-sm);
+  backdrop-filter:blur(8px);
 }
-.hero h1{font-size:clamp(2.8rem,11vw,4.25rem);margin:22px 0 20px;font-weight:900;letter-spacing:-.015em;line-height:1.08}
-.hero h1 .hl{
-  background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);
-  padding:0 4px;
+.hero h1{font-size:clamp(2.5rem,8.5vw,3.75rem);margin:22px 0 20px;font-weight:900;letter-spacing:-.02em;line-height:1.12;color:var(--foreground)}
+.grad-text{
+  background:linear-gradient(110deg,#14532D 0%,#15803D 45%,#059669 100%);
+  -webkit-background-clip:text;background-clip:text;
+  color:#15803D;-webkit-text-fill-color:transparent;
 }
-.hero h1 .hl-blue{
-  background:linear-gradient(180deg,transparent 58%, var(--tertiary) 58%);
-  padding:0 4px;
-}
+.accent-green{color:#15803D;font-weight:800}
 .hero .support-line{font-family:"Nunito",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--accent);margin-bottom:6px}
 .hero p.lead{font-size:1.0625rem;color:var(--body-fg);max-width:56ch;line-height:1.625}
-.hero-list{list-style:none;margin:22px 0 26px;display:grid;gap:12px}
+.hero-list{list-style:none;margin:22px 0 26px;display:grid;gap:12px;justify-items:start}
 .hero-list li{display:flex;align-items:center;gap:12px;font-weight:500}
 .tick{
   width:28px;height:28px;flex:0 0 28px;border-radius:50%;
@@ -234,9 +227,6 @@ section{padding:72px 0;position:relative;overflow:hidden}
   box-shadow:var(--clay-card-sm);
 }
 @media(max-width:900px){
-  .hero-grid{text-align:center}
-  .hero p.lead{margin:0 auto}
-  .hero-list{justify-items:start;max-width:380px;margin-left:auto;margin-right:auto}
   .hero .btn{width:100%}
 }
 
@@ -290,8 +280,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .deliv-item p{color:var(--body-fg);font-size:.9688rem;line-height:1.625}
 @media(max-width:600px){.deliv-item{padding:20px;gap:14px}.deliv-num{width:42px;height:42px;font-size:1rem}}
 
-.highlight-note{text-align:center;font-size:1.125rem;font-weight:700;max-width:720px;margin:40px auto 0;font-family:"Nunito",sans-serif}
-.highlight-note .hl{background:linear-gradient(180deg,transparent 58%, var(--vivid-green) 58%);padding:0 4px}
+.highlight-note{text-align:center;font-size:1.125rem;font-weight:700;max-width:720px;margin:40px auto 0;font-family:"Nunito",sans-serif;color:var(--foreground)}
 
 /* ============ VITRINA (coverflow con profundidad) ============ */
 .vitrine-wrap{position:relative;max-width:760px;margin:0 auto;padding:14px 18px 0}
@@ -557,7 +546,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
           FISIOTERAPEUTAS · T.O. · EDUCADORES FÍSICOS · CUIDADORES
         </span>
 
-        <h1><span class="hl">1500 Actividades</span> físicas, cognitivas y grupales para <span class="hl-blue">Adultos Mayores</span></h1>
+        <h1><span class="grad-text">1500</span> Actividades físicas, cognitivas y grupales para <span class="grad-text">Adultos Mayores</span></h1>
 
         <p class="lead">Ejercicios físicos, actividades cognitivas y dinámicas grupales, organizados por objetivo y nivel, con instrucciones paso a paso e ilustraciones. Abres, eliges y preparas tu sesión en minutos.</p>
         <p class="support-line">Deja de planificar cada sesión desde cero.</p>
@@ -705,7 +694,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       </div>
     </div>
 
-    <p class="highlight-note reveal"><span class="hl">1500 actividades para ampliar tu repertorio y preparar sesiones con más variedad. Abres, eliges y aplicas.</span></p>
+    <p class="highlight-note reveal"><span class="accent-green">1500 actividades</span> para ampliar tu repertorio y preparar sesiones con más variedad. Abres, eliges y aplicas.</p>
   </div>
 </section>
 
@@ -910,7 +899,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
   <div class="container">
     <div class="panel-single">
       <div class="panel reveal">
-        <h3>¿Para quién es <span style="background:linear-gradient(180deg,transparent 58%,var(--quaternary) 58%);padding:0 3px">indispensable</span> este material?</h3>
+        <h3>¿Para quién es <span class="accent-green">indispensable</span> este material?</h3>
         <ul class="check-list">
           <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🩺 Fisioterapeutas y Kinesiólogos</strong>Para llegar a cada sesión con variedad de actividades físicas y cognitivas, y fichas que puedes consultar por objetivo en segundos.</span></li>
           <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span><strong>🤝 Cuidadores de Adultos Mayores</strong>Para organizar estímulos y actividades del día a día, con instrucciones paso a paso que facilitan acompañar sin improvisar.</span></li>
