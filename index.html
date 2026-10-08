@@ -261,24 +261,22 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .steps-close{text-align:center;margin-top:28px;font-weight:700;font-family:"Nunito",sans-serif;font-size:1.0625rem}
 
 /* ============ CATEGORÍAS LIST ============ */
-.deliv{display:grid;gap:20px}
+.deliv{display:grid;gap:16px}
 .deliv-item{
-  display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;
+  display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;
   background:#fff;border:0;border-radius:var(--r-lg);
-  padding:24px;box-shadow:var(--clay-card);
+  padding:20px 24px;box-shadow:var(--clay-card);
   transition:transform .3s var(--bounce),box-shadow .3s var(--bounce);
 }
 .deliv-item:hover{transform:translateY(-6px);box-shadow:var(--clay-card-hover)}
 .deliv-num{
-  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;
   border:0;box-shadow:var(--clay-card-sm);
-  font-family:"Nunito",sans-serif;font-weight:800;font-size:1.25rem;color:#fff;
+  background:linear-gradient(135deg,#34D399,var(--quaternary));color:#fff;
 }
-.c1{background:linear-gradient(135deg,#38BDF8,var(--brand-blue))} .c2{background:linear-gradient(135deg,#DB2777,var(--secondary))} .c3{background:linear-gradient(135deg,#FCD34D,var(--tertiary));color:#3D2E00!important} .c4{background:linear-gradient(135deg,#6EE7B7,var(--quaternary));color:#07332A!important} .c5{background:linear-gradient(135deg,#38BDF8,var(--brand-blue))}
-.c6{background:linear-gradient(135deg,#DB2777,var(--secondary))} .c7{background:linear-gradient(135deg,#FCD34D,var(--tertiary));color:#3D2E00!important} .c8{background:linear-gradient(135deg,#6EE7B7,var(--quaternary));color:#07332A!important} .c9{background:linear-gradient(135deg,#38BDF8,var(--brand-blue))} .c10{background:linear-gradient(135deg,#DB2777,var(--secondary))} .c11{background:linear-gradient(135deg,#FCD34D,var(--tertiary));color:#3D2E00!important}
-.deliv-item h3{font-size:1.1875rem;margin-bottom:6px;font-weight:800}
-.deliv-item p{color:var(--body-fg);font-size:.9688rem;line-height:1.625}
-@media(max-width:600px){.deliv-item{padding:20px;gap:14px}.deliv-num{width:42px;height:42px;font-size:1rem}}
+.deliv-num svg{width:24px;height:24px}
+.deliv-item h3{font-size:1.1875rem;font-weight:800;margin:0}
+@media(max-width:600px){.deliv-item{padding:16px 18px;gap:14px}.deliv-num{width:40px;height:40px}.deliv-num svg{width:20px;height:20px}}
 
 .highlight-note{text-align:center;font-size:1.125rem;font-weight:700;max-width:720px;margin:40px auto 0;font-family:"Nunito",sans-serif;color:var(--foreground)}
 
@@ -418,8 +416,8 @@ section{padding:72px 0;position:relative;overflow:hidden}
 #oferta .eyebrow{color:var(--tertiary)}
 .offer-card{
   max-width:640px;margin:0 auto;background:#fff;color:var(--foreground);
-  border:0;border-radius:var(--r-xl);
-  padding:36px;box-shadow:var(--clay-surface);position:relative;
+  border:1px solid var(--tertiary);border-radius:var(--r-xl);
+  padding:36px;box-shadow:0 18px 40px rgba(245,158,11,.14),0 4px 14px rgba(124,58,237,.08);position:relative;
 }
 .star-badge{
   position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-4deg);
@@ -616,81 +614,70 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
     <div class="deliv">
       <div class="deliv-item reveal">
-        <div class="deliv-num c1">1</div>
+        <div class="deliv-num c1"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades para Prevenir Caídas y Mejorar el Equilibrio</h3>
-          <p>Para trabajar la firmeza al caminar, al girar y al levantarse, con una progresión pensada para ganar estabilidad paso a paso.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c2">2</div>
+        <div class="deliv-num c2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades para Estimular la Memoria</h3>
-          <p>Para apoyar una mente activa y despierta: recordar nombres, rostros, fechas y momentos del día a día.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c3">3</div>
+        <div class="deliv-num c3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades para la Autonomía en el Día a Día</h3>
-          <p>Para practicar los movimientos que se repiten cada día: levantarse, sentarse, vestirse, alcanzar un objeto, subir un escalón.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c4">4</div>
+        <div class="deliv-num c4"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Ejercicios para Trabajar la Fuerza y el Mantenimiento Muscular</h3>
-          <p>Para apoyar la fuerza en piernas, brazos y tronco, con cargas progresivas adaptadas a cada nivel.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c5">5</div>
+        <div class="deliv-num c5"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades de Coordinación Motora</h3>
-          <p>Para practicar movimientos más precisos y un control del cuerpo que se nota al caminar, al tomar un objeto y en el día a día.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c6">6</div>
+        <div class="deliv-num c6"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades en Silla para Movilidad Reducida</h3>
-          <p>Pensadas para adultos mayores que no pueden estar de pie o que usan silla de ruedas, con cada movimiento adaptado para hacerse sentado.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c7">7</div>
+        <div class="deliv-num c7"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades de Motricidad Fina</h3>
-          <p>Para practicar precisión y control en las manos: abotonarse, sostener una taza, escribir, y otros gestos cotidianos.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c8">8</div>
+        <div class="deliv-num c8"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades de Atención y Concentración</h3>
-          <p>Para entrenar la capacidad de enfocarse y seguir una instrucción de principio a fin.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c9">9</div>
+        <div class="deliv-num c9"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Actividades de Lenguaje y Comunicación</h3>
-          <p>Para apoyar la expresión y la conversación, y acompañar a quien disfruta de comunicarse con los que ama.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c10">10</div>
+        <div class="deliv-num c10"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Dinámicas Grupales y de Socialización</h3>
-          <p>Para transformar un grupo de adultos mayores en una comunidad: participación, conexión y sentido de pertenencia.</p>
-        </div>
+                </div>
       </div>
       <div class="deliv-item reveal">
-        <div class="deliv-num c11">11</div>
+        <div class="deliv-num c11"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div>
           <h3>Ejercicios de Estiramiento, Respiración y Relajación</h3>
-          <p>Para liberar tensiones, soltar las articulaciones y acompañar una respiración más profunda y tranquila.</p>
-        </div>
+                </div>
       </div>
     </div>
 
