@@ -201,15 +201,15 @@ section{padding:72px 0;position:relative;overflow:hidden}
   box-shadow:var(--clay-card-sm);
   backdrop-filter:blur(8px);
 }
-.hero h1{font-size:clamp(2.5rem,8.5vw,3.75rem);margin:22px 0 20px;font-weight:900;letter-spacing:-.02em;line-height:1.12;color:var(--foreground)}
+.hero h1{font-size:clamp(2.5rem,8.5vw,3.75rem);margin:22px 0 20px;font-weight:900;letter-spacing:-.02em;line-height:1.12;color:var(--foreground);text-align:center}
 .grad-text{
   background:linear-gradient(110deg,#14532D 0%,#15803D 45%,#059669 100%);
   -webkit-background-clip:text;background-clip:text;
   color:#15803D;-webkit-text-fill-color:transparent;
 }
 .accent-green{color:#15803D;font-weight:800}
-.hero .support-line{font-family:"Nunito",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--accent);margin-bottom:6px}
-.hero p.lead{font-size:1.0625rem;color:var(--body-fg);max-width:56ch;line-height:1.625}
+.hero .support-line{font-family:"Nunito",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--accent);margin-bottom:6px;text-align:center}
+.hero p.lead{font-size:1.0625rem;color:var(--body-fg);max-width:56ch;line-height:1.625;text-align:center;margin-left:auto;margin-right:auto}
 .hero-list{list-style:none;margin:22px 0 26px;display:grid;gap:12px;justify-items:start}
 .hero-list li{display:flex;align-items:center;gap:12px;font-weight:500}
 .tick{
@@ -424,7 +424,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
   padding:36px;box-shadow:0 6px 18px rgba(124,58,237,.06);position:relative;
 }
 .star-badge{
-  position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-4deg);
+  position:absolute;top:-22px;left:50%;transform:translateX(-50%);
   background:linear-gradient(135deg,#FCD34D,var(--tertiary));border:0;
   border-radius:var(--r-full);padding:9px 24px;white-space:nowrap;
   font-family:"Nunito",sans-serif;font-weight:800;font-size:.875rem;color:#3D2E00;
@@ -550,6 +550,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 .about-text p:last-child{margin-bottom:0}
 .about-text strong{color:var(--foreground);font-weight:800}
 .about-commitment{margin-top:8px;font-weight:700;color:var(--foreground)}
+.about-cta{text-align:center;margin-top:32px}
 </style>
 </head>
 <body>
@@ -580,7 +581,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <p class="support-line">Deja de planificar cada sesión desde cero.</p>
 
         <div class="mockup-frame">
-          <img src="images/mockup-hero-new.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup-plain" width="1100" height="1100" loading="eager">
+          <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup-plain" width="1000" height="1500" loading="eager">
         </div>
 
         <ul class="hero-list">
@@ -748,7 +749,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
     <div class="reveal" style="margin-bottom:12px">
       <div class="mockup-frame" style="max-width:300px">
-        <img src="images/mockup-hero-new.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup-plain" width="1100" height="1100" loading="lazy">
+        <img src="images/mockup1500.webp" alt="1500 Actividades para Adultos Mayores" class="product-mockup-plain" width="1000" height="1500" loading="lazy">
       </div>
     </div>
 
@@ -979,11 +980,11 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Material para imprimir o consultar en pantalla</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acceso desde el celular o la computadora</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acceso de por vida</li>
-        <li><span class="gift-ico">🎁</span> Guía de Evaluación Funcional del Adulto Mayor</li>
-        <li><span class="gift-ico">🎁</span> Guía de Adaptaciones por Condición de Salud</li>
-        <li><span class="gift-ico">🎁</span> Informes de Evolución para Familias</li>
-        <li><span class="gift-ico">🎁</span> +100 Ejercicios · Movilidad Reducida</li>
-        <li><span class="gift-ico">🎁</span> Armador de Sesiones</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Guía de Evaluación Funcional del Adulto Mayor</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Guía de Adaptaciones por Condición de Salud</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Informes de Evolución para Familias</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> +100 Ejercicios · Movilidad Reducida</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Armador de Sesiones</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Garantía de 7 días</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Actualizaciones mensuales</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Soporte prioritario</li>
@@ -1027,6 +1028,12 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <p>Creemos que envejecer debe preservar un espacio para la <strong>autonomía, el movimiento, el aprendizaje y la convivencia</strong>. Y que quienes cuidan necesitan recursos y orientación para transformar estos objetivos en acciones cotidianas.</p>
         <p>Por eso, nuestro trabajo conecta <strong>actividades físicas, estimulación cognitiva e interacción social</strong>, apoyando a profesionales, cuidadores, instituciones y familias en la construcción de una rutina más activa, participativa y acogedora para los adultos mayores.</p>
         <p class="about-commitment"><strong>Nuestro compromiso es con quienes cuidan y con la dignidad, la participación y el bienestar de quienes reciben ese cuidado.</strong></p>
+      </div>
+      <div class="about-cta">
+        <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn" id="cta-sobre">
+          Quiero recibir las 1500 actividades
+          <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
       </div>
     </div>
   </div>
@@ -1160,10 +1167,10 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
 <script>
 // Evento InitiateCheckout solo en los botones de checkout real
-// (CTA principal, garantía y último botón de la página).
+// (CTA principal, sección "quiénes somos", garantía y último botón de la página).
 // El botón del hero es solo un ancla, no dispara el evento.
 (function(){
-  var ids = ['cta-principal', 'cta-garantia', 'cta-final'];
+  var ids = ['cta-principal', 'cta-sobre', 'cta-garantia', 'cta-final'];
   ids.forEach(function(id){
     var el = document.getElementById(id);
     if(el){

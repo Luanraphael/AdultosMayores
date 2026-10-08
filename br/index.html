@@ -201,15 +201,15 @@ section{padding:72px 0;position:relative;overflow:hidden}
   box-shadow:var(--clay-card-sm);
   backdrop-filter:blur(8px);
 }
-.hero h1{font-size:clamp(2.5rem,8.5vw,3.75rem);margin:22px 0 20px;font-weight:900;letter-spacing:-.02em;line-height:1.12;color:var(--foreground)}
+.hero h1{font-size:clamp(2.5rem,8.5vw,3.75rem);margin:22px 0 20px;font-weight:900;letter-spacing:-.02em;line-height:1.12;color:var(--foreground);text-align:center}
 .grad-text{
   background:linear-gradient(110deg,#14532D 0%,#15803D 45%,#059669 100%);
   -webkit-background-clip:text;background-clip:text;
   color:#15803D;-webkit-text-fill-color:transparent;
 }
 .accent-green{color:#15803D;font-weight:800}
-.hero .support-line{font-family:"Nunito",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--accent);margin-bottom:6px}
-.hero p.lead{font-size:1.0625rem;color:var(--body-fg);max-width:56ch;line-height:1.625}
+.hero .support-line{font-family:"Nunito",sans-serif;font-weight:700;font-size:1.0625rem;color:var(--accent);margin-bottom:6px;text-align:center}
+.hero p.lead{font-size:1.0625rem;color:var(--body-fg);max-width:56ch;line-height:1.625;text-align:center;margin-left:auto;margin-right:auto}
 .hero-list{list-style:none;margin:22px 0 26px;display:grid;gap:12px;justify-items:start}
 .hero-list li{display:flex;align-items:center;gap:12px;font-weight:500}
 .tick{
@@ -424,7 +424,7 @@ section{padding:72px 0;position:relative;overflow:hidden}
   padding:36px;box-shadow:0 6px 18px rgba(124,58,237,.06);position:relative;
 }
 .star-badge{
-  position:absolute;top:-22px;left:50%;transform:translateX(-50%) rotate(-4deg);
+  position:absolute;top:-22px;left:50%;transform:translateX(-50%);
   background:linear-gradient(135deg,#FCD34D,var(--tertiary));border:0;
   border-radius:var(--r-full);padding:9px 24px;white-space:nowrap;
   font-family:"Nunito",sans-serif;font-weight:800;font-size:.875rem;color:#3D2E00;
@@ -563,6 +563,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 .about-text p:last-child{margin-bottom:0}
 .about-text strong{color:var(--foreground);font-weight:800}
 .about-commitment{margin-top:8px;font-weight:700;color:var(--foreground)}
+.about-cta{text-align:center;margin-top:32px}
 </style>
 </head>
 <body>
@@ -593,7 +594,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <p class="support-line">Pare de planejar cada sessão do zero.</p>
 
         <div class="mockup-frame">
-          <img src="images/mockup-hero-new.webp" alt="1500 Atividades para Idosos" class="product-mockup-plain" width="1100" height="1100" loading="eager">
+          <img src="images/mockup1500.webp" alt="1500 Atividades para Idosos" class="product-mockup-plain" width="1000" height="1500" loading="eager">
         </div>
 
         <ul class="hero-list">
@@ -761,7 +762,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
     <div class="reveal" style="margin-bottom:12px">
       <div class="mockup-frame" style="max-width:300px">
-        <img src="images/mockup-hero-new.webp" alt="1500 Atividades para Idosos" class="product-mockup-plain" width="1100" height="1100" loading="lazy">
+        <img src="images/mockup1500.webp" alt="1500 Atividades para Idosos" class="product-mockup-plain" width="1000" height="1500" loading="lazy">
       </div>
     </div>
 
@@ -991,11 +992,11 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Envio imediato por WhatsApp e e-mail após a confirmação do pagamento</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Acesso vitalício</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Garantia de 30 dias</li>
-        <li><span class="gift-ico">🎁</span> Guia de Avaliação Funcional do Idoso</li>
-        <li><span class="gift-ico">🎁</span> Guia de Adaptações por Condição de Saúde</li>
-        <li><span class="gift-ico">🎁</span> Relatórios de Evolução para Famílias</li>
-        <li><span class="gift-ico">🎁</span> +100 Exercícios · Mobilidade Reduzida</li>
-        <li><span class="gift-ico">🎁</span> Montador de Sessões</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Guia de Avaliação Funcional do Idoso</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Guia de Adaptações por Condição de Saúde</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Relatórios de Evolução para Famílias</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> +100 Exercícios · Mobilidade Reduzida</li>
+        <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Montador de Sessões</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Atualizações mensais</li>
         <li><span class="tick"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Suporte prioritário</li>
       </ul>
@@ -1076,6 +1077,12 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         <p>Acreditamos que envelhecer deve preservar espaço para <strong>autonomia, movimento, aprendizado e convivência</strong>. E que quem cuida precisa de recursos e orientação para transformar esses objetivos em ações no dia a dia.</p>
         <p>Por isso, nosso trabalho conecta <strong>atividades físicas, estimulação cognitiva e interação social</strong>, apoiando profissionais, cuidadores, instituições e famílias na construção de uma rotina mais ativa, participativa e acolhedora para os idosos.</p>
         <p class="about-commitment"><strong>Nosso compromisso é com quem cuida e com a dignidade, a participação e o bem-estar de quem recebe esse cuidado.</strong></p>
+      </div>
+      <div class="about-cta">
+        <a href="https://payfast.greenn.com.br/redirect/794052" class="btn" id="cta-sobre">
+          Quero o Kit Premium completo
+          <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
       </div>
     </div>
   </div>
@@ -1209,10 +1216,10 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 
 <script>
 // Evento InitiateCheckout somente nos botões de checkout real
-// (CTA do Kit Premium, CTA do Kit Básico e CTA da seção de garantia).
+// (CTA do Kit Premium, CTA do Kit Básico, CTA da seção "quem somos" e CTA da garantia).
 // Os demais botões são âncoras para a seção de oferta, não disparam o evento.
 (function(){
-  var ids = ['cta-principal', 'cta-basico', 'cta-garantia'];
+  var ids = ['cta-principal', 'cta-basico', 'cta-sobre', 'cta-garantia'];
   ids.forEach(function(id){
     var el = document.getElementById(id);
     if(el){
