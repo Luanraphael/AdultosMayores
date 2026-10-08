@@ -519,6 +519,37 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
   .marquee-track{animation:none}
   .amb-blob{animation:none}
 }
+
+/* ============ SHOWCASE: POR QUÉ LOS PROFESIONALES ELIGEN ============ */
+.showcase-wrap{max-width:720px;margin:44px auto 0;position:relative}
+.showcase-mockup-outer{width:86%;margin:0 auto;position:relative;z-index:2;line-height:0}
+.showcase-mockup-outer img{width:100%;height:auto;display:block;filter:drop-shadow(0 28px 38px rgba(76,29,149,.3))}
+.showcase-card{
+  position:relative;z-index:1;margin-top:-20.38%;
+  padding:calc(20.38% + 40px) 30px 40px;border-radius:28px;
+  background:linear-gradient(160deg,#3B1670,#7C3AED);
+  box-shadow:0 20px 50px rgba(59,22,112,.28);color:#fff;
+}
+.showcase-card p{text-align:left;max-width:620px;margin:0 auto 18px;font-size:1.0625rem;line-height:1.6;color:rgba(255,255,255,.94)}
+.showcase-card p:last-child{margin-bottom:0}
+.showcase-card strong{color:#fff;font-weight:800}
+.showcase-authority{
+  margin-top:26px!important;padding-top:22px;border-top:1px solid rgba(255,255,255,.2);
+  font-weight:800;letter-spacing:.005em;
+}
+@media(max-width:600px){
+  .showcase-card{padding:calc(20.38% + 30px) 22px 32px;border-radius:24px}
+}
+
+/* ============ QUIÉNES SOMOS ============ */
+.about-wrap{max-width:720px;margin:0 auto;text-align:center}
+.about-logo{width:112px;height:112px;border-radius:50%;display:block;margin:0 auto 28px;object-fit:cover;box-shadow:var(--clay-card-sm)}
+@media(min-width:900px){.about-logo{width:140px;height:140px}}
+.about-text{text-align:left}
+.about-text p{color:var(--body-fg);font-size:1.0625rem;line-height:1.6;margin-bottom:18px}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--foreground);font-weight:800}
+.about-commitment{margin-top:8px;font-weight:700;color:var(--foreground)}
 </style>
 </head>
 <body>
@@ -599,6 +630,25 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
     </div>
 
     <p class="steps-close reveal">Tu próxima sesión empieza con una actividad elegida, no con una página en blanco.</p>
+  </div>
+</section>
+
+<!-- ═══════════ 3B. POR QUÉ LOS PROFESIONALES ELIGEN ESTE KIT ═══════════ -->
+<section>
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>¿Por qué los profesionales eligen <em class="grad-text">este kit?</em></h2>
+    </div>
+
+    <div class="showcase-wrap reveal">
+      <div class="showcase-mockup-outer">
+        <img src="images/mockup-premium-showcase.webp" alt="Profesionales y adultos mayores usando el material 1500 Actividades en laptop y celular" width="1400" height="737" loading="lazy">
+      </div>
+      <div class="showcase-card">
+        <p>El <strong>Kit 1500 Actividades</strong> reúne actividades físicas, cognitivas y grupales adaptadas para adultos mayores, organizadas <strong>por nivel, objetivo y tipo de actividad</strong>. Cada página presenta <strong>el objetivo, los materiales, las precauciones y el paso a paso ilustrado</strong>. Consultas el material, eliges según las necesidades del adulto mayor y preparas la aplicación con mayor claridad, ya sea de forma individual o en grupo, <strong>con o sin equipamiento, incluyendo opciones para personas con movilidad reducida.</strong></p>
+        <p class="showcase-authority"><strong>Todas las actividades presentadas son probadas y aprobadas por nuestro equipo de profesionales de UNIPE.</strong></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -958,6 +1008,25 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           Pago seguro · Acceso digital · Garantía de 7 días
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 11B. ¿QUIÉNES SOMOS? ═══════════ -->
+<section>
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>¿Quiénes somos?</h2>
+    </div>
+
+    <div class="about-wrap reveal">
+      <img src="images/logo-unipe.webp" alt="Logo de UNIPE, instituto de cuidado al adulto mayor" class="about-logo" width="500" height="500" loading="lazy">
+      <div class="about-text">
+        <p><strong>UNIPE es un instituto dedicado al cuidado, la estimulación y la valoración de las personas mayores</strong>, con el propósito de apoyar a quienes dedican su trabajo y su día a día a esta misión.</p>
+        <p>Creemos que envejecer debe preservar un espacio para la <strong>autonomía, el movimiento, el aprendizaje y la convivencia</strong>. Y que quienes cuidan necesitan recursos y orientación para transformar estos objetivos en acciones cotidianas.</p>
+        <p>Por eso, nuestro trabajo conecta <strong>actividades físicas, estimulación cognitiva e interacción social</strong>, apoyando a profesionales, cuidadores, instituciones y familias en la construcción de una rutina más activa, participativa y acogedora para los adultos mayores.</p>
+        <p class="about-commitment"><strong>Nuestro compromiso es con quienes cuidan y con la dignidad, la participación y el bienestar de quienes reciben ese cuidado.</strong></p>
       </div>
     </div>
   </div>
