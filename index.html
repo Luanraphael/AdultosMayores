@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 <head>
 <meta charset="UTF-8">
+<script>document.documentElement.classList.remove('no-js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>1500 Actividades para Adultos Mayores</title>
 <meta name="description" content="1500 actividades para adultos mayores: ejercicios físicos, actividades cognitivas y dinámicas grupales, organizadas por objetivo y nivel, con instrucciones paso a paso e ilustraciones.">
@@ -436,21 +437,36 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .offer-includes li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;font-size:.9688rem}
 .divider-dash{border:0;border-top:2px dashed var(--border);margin:26px 0}
 .price-box{text-align:center}
-.price-from{color:var(--muted-fg);text-decoration:line-through;font-weight:700;font-size:1.0625rem}
+.price-old-wrap{position:relative;display:inline-block}
+.price-old-value{color:var(--muted-fg);font-weight:700;font-size:1.0625rem;white-space:nowrap}
+.price-old-svg{
+  position:absolute;left:-5px;right:-5px;top:-4px;bottom:-4px;
+  width:calc(100% + 10px);height:calc(100% + 8px);
+  pointer-events:none;overflow:visible;
+}
+.price-old-svg path{fill:none;stroke:#EF4444;stroke-width:3px;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.no-js .price-old-value{text-decoration:line-through;text-decoration-color:#EF4444;text-decoration-thickness:2px}
+.no-js .price-old-svg{display:none}
 .price-today{
-  display:inline-block;font-family:"Nunito",sans-serif;font-weight:800;
-  font-size:.8125rem;text-transform:uppercase;letter-spacing:.1em;
-  background:linear-gradient(135deg,#DB2777,var(--secondary));color:#fff;border:0;
-  border-radius:var(--r-full);padding:6px 18px;margin:12px 0 6px;
-  box-shadow:var(--clay-card-sm);
+  display:block;font-family:"Nunito",sans-serif;font-weight:700;
+  font-size:.8125rem;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--muted-fg);margin:10px 0 2px;
 }
 .price-main{
-  font-family:"Nunito",sans-serif;font-weight:900;font-size:clamp(3rem,9vw,4.25rem);line-height:1;
+  display:flex;align-items:baseline;justify-content:center;gap:4px;
+  font-family:"Nunito",sans-serif;font-weight:900;line-height:1;margin-top:4px;
+}
+.price-main .price-cur{
+  font-size:clamp(1.375rem,4vw,1.875rem);font-weight:800;
   background:linear-gradient(135deg,#34D399,#059669);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.price-inst{font-weight:700;margin-top:8px}
-.price-note{color:var(--muted-fg);font-size:.875rem;margin-top:6px}
+.price-main .price-val{
+  font-size:clamp(3rem,9vw,4.25rem);
+  background:linear-gradient(135deg,#34D399,#059669);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.price-secure{color:var(--muted-fg);font-size:.875rem;margin-top:8px;font-weight:500}
 .secure{
   display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;
   font-family:"Nunito",sans-serif;font-weight:700;font-size:.8125rem;
@@ -993,12 +1009,13 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
       <hr class="divider-dash">
 
       <div class="price-box">
-        <div class="price-from">DE $67,90</div>
-        <div class="price-today">Hoy solo</div>
-        <div class="price-main">$10</div>
-        <div class="price-inst">O 5X DE $2,98</div>
-        <div class="price-note">Pago único</div>
-        <div class="price-note">⚠️ Puedes pagar en tu moneda local.</div>
+        <div class="price-old-wrap">
+          <span class="price-old-value">ANTES: $97</span>
+          <svg class="price-old-svg" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3,13 L97,7"/></svg>
+        </div>
+        <div class="price-today">HOY SOLO</div>
+        <div class="price-main"><span class="price-cur">$</span><span class="price-val">10</span></div>
+        <div class="price-secure">Pago 100% seguro</div>
 
         <a href="https://pay.hotmart.com/W107820578K?checkoutMode=10" class="btn btn-green btn-block" style="margin-top:24px" id="cta-principal">
           Quiero recibir las 1500 actividades
@@ -1178,6 +1195,48 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         if(typeof fbq === 'function'){ fbq('track', 'InitiateCheckout'); }
       });
     }
+  });
+})();
+</script>
+
+<script>
+// Animación del precio anterior: el trazo rojo se dibuja (stroke-dashoffset)
+// cuando el bloque de precio entra ~60% en el viewport, una sola vez por carga.
+(function(){
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var wraps = document.querySelectorAll('.price-old-wrap');
+  wraps.forEach(function(wrap){
+    var path = wrap.querySelector('.price-old-svg path');
+    if(!path || typeof path.getTotalLength !== 'function') return;
+    var len = path.getTotalLength();
+    path.style.strokeDasharray = len;
+    path.style.strokeDashoffset = len;
+
+    if(reduceMotion){
+      path.style.strokeDashoffset = '0';
+      return;
+    }
+
+    if(!('IntersectionObserver' in window)){
+      path.style.strokeDashoffset = '0';
+      return;
+    }
+
+    var triggered = false;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(triggered) return;
+        if(entry.isIntersecting && entry.intersectionRatio >= 0.6){
+          triggered = true;
+          io.unobserve(wrap);
+          setTimeout(function(){
+            path.style.transition = 'stroke-dashoffset 650ms cubic-bezier(0.45,0,0.55,1)';
+            path.style.strokeDashoffset = '0';
+          }, 120);
+        }
+      });
+    }, {threshold:[0.6]});
+    io.observe(wrap);
   });
 })();
 </script>
