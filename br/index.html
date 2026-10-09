@@ -202,6 +202,21 @@ section{padding:72px 0;position:relative;overflow:hidden}
   box-shadow:var(--clay-card-sm);
   backdrop-filter:blur(8px);
 }
+.social-proof{text-align:center;margin-bottom:14px}
+.social-avatars{display:flex;align-items:center;justify-content:center}
+.social-avatar{
+  width:52px;height:52px;border-radius:50%;object-fit:cover;
+  border:3px solid #fff;box-shadow:var(--clay-card-sm);
+  margin-left:-14px;
+}
+.social-avatar:first-child{margin-left:0}
+.social-rating{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.social-stars{color:#F59E0B;font-size:1.125rem;letter-spacing:1px;line-height:1}
+.social-count{font-family:"Nunito",sans-serif;font-weight:800;font-size:1rem;color:var(--foreground)}
+@media(max-width:420px){
+  .social-avatar{width:44px;height:44px;margin-left:-12px}
+  .social-count{font-size:.9375rem}
+}
 .hero h1{font-size:clamp(2.5rem,8.5vw,3.75rem);margin:22px 0 20px;font-weight:900;letter-spacing:-.02em;line-height:1.12;color:var(--foreground);text-align:center}
 .grad-text{
   background:linear-gradient(110deg,#14532D 0%,#15803D 45%,#059669 100%);
@@ -593,7 +608,7 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
 </div>
 
 <!-- ═══════════ 1. TOP BAR ═══════════ -->
-<div class="topbar"><span class="pulse"></span>Desconto só HOJE nesta página!</div>
+<div class="topbar"><span class="pulse"></span>DESCONTO DE 72% APENAS HOJE 09/10/2026</div>
 
 <!-- ═══════════ 2. HERO ═══════════ -->
 <section class="hero">
@@ -605,6 +620,20 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
   <div class="container">
     <div class="hero-grid">
       <div class="reveal">
+        <div class="social-proof">
+          <div class="social-avatars">
+            <img src="images/avatar1.webp" alt="" class="social-avatar" width="112" height="112" loading="eager">
+            <img src="images/avatar2.webp" alt="" class="social-avatar" width="112" height="112" loading="eager">
+            <img src="images/avatar3.webp" alt="" class="social-avatar" width="112" height="112" loading="eager">
+            <img src="images/avatar4.webp" alt="" class="social-avatar" width="112" height="112" loading="eager">
+            <img src="images/avatar5.webp" alt="" class="social-avatar" width="112" height="112" loading="eager">
+          </div>
+          <div class="social-rating">
+            <span class="social-stars" aria-hidden="true">★★★★★</span>
+            <span class="social-count">+1.700 profissionais usando</span>
+          </div>
+        </div>
+
         <h1><span class="grad-text">1500 atividades</span> físicas, cognitivas e grupais adaptadas para <span class="grad-text">idosos</span></h1>
 
         <p class="lead">Exercícios físicos, atividades cognitivas e dinâmicas em grupo, organizados por objetivo e nível, com instruções passo a passo e ilustrações. Abra, escolha e prepare sua sessão em minutos.</p>
