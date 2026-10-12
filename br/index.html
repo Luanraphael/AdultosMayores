@@ -347,21 +347,6 @@ section{padding:72px 0;position:relative;overflow:hidden}
 .lb-counter{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#fff;font-family:"Nunito",sans-serif;font-weight:700}
 @media(max-width:600px){.lb-nav{width:40px;height:40px;font-size:1.25rem}.lb-prev{left:8px}.lb-next{right:8px}}
 
-/* ============ TESTIMONIOS CARRUSEL (auto) ============ */
-.marquee{
-  position:relative;overflow:hidden;padding:10px 0;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
-  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
-}
-.marquee-track{display:flex;gap:16px;width:max-content;animation:scroll 24s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.slide{flex:0 0 auto;height:380px;border-radius:var(--r-md);overflow:hidden;display:flex;align-items:center}
-.slide img{height:100%;width:auto;display:block;object-fit:contain}
-.testi-track{animation-duration:36s}
-.testi-slide{height:auto;width:min(360px,78vw)}
-.testi-slide img{height:auto;width:100%;object-fit:contain;aspect-ratio:700/1243;background:rgba(0,0,0,.03)}
-@media(max-width:600px){.testi-slide{width:82vw}.testi-track{animation-duration:26s}}
 
 /* ============ TODO LO QUE INCLUYE ============ */
 .incl-list{display:grid;gap:14px;max-width:720px;margin:0 auto}
@@ -562,7 +547,6 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
-  .marquee-track{animation:none}
   .amb-blob{animation:none}
 }
 
@@ -927,37 +911,6 @@ footer .disclaimer{margin-top:14px;color:#8B8597;font-size:.75rem}
         Quero receber os 1500 exercícios
         <span class="arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ 8. TESTIMONIOS ═══════════ -->
-<section style="background:var(--muted)">
-  <div class="dots"></div>
-  <svg class="confetti" style="top:60px;right:8%;" width="40" height="40" viewBox="0 0 40 40"><rect x="4" y="4" width="32" height="32" rx="9" fill="#F472B6" stroke="#1E293B" stroke-width="2.5" transform="rotate(-12 20 20)"/></svg>
-
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Depoimentos</span>
-      <h2>O que dizem as pessoas que já utilizam o material</h2>
-    </div>
-
-    <div class="marquee">
-      <div class="marquee-track testi-track">
-        <div class="slide testi-slide"><img src="images/dep1-br.webp" alt="Depoimento de Edelmira S. sobre o material, com foto de exercício com bola" width="700" height="1243" loading="lazy"></div>
-        <div class="slide testi-slide"><img src="images/dep2-br.webp" alt="Depoimento de Carmen V. sobre o material, com foto de exercício com faixa elástica" width="700" height="1243" loading="lazy"></div>
-        <div class="slide testi-slide"><img src="images/dep3-br.webp" alt="Depoimento de Juliana Mendes sobre a ficha Rolar na palma" width="700" height="1243" loading="lazy"></div>
-        <div class="slide testi-slide"><img src="images/dep4-br.webp" alt="Depoimento sobre exercício de levantar da cadeira" width="700" height="1243" loading="lazy"></div>
-        <div class="slide testi-slide"><img src="images/dep5-br.webp" alt="Depoimento sobre exercício com faixa elástica em cadeira de rodas" width="700" height="1243" loading="lazy"></div>
-        <div class="slide testi-slide"><img src="images/dep6-br.webp" alt="Depoimento sobre atividade com cones coloridos" width="700" height="1243" loading="lazy"></div>
-        <!-- duplicado para loop continuo -->
-        <div class="slide testi-slide"><img src="images/dep1-br.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide testi-slide"><img src="images/dep2-br.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide testi-slide"><img src="images/dep3-br.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide testi-slide"><img src="images/dep4-br.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide testi-slide"><img src="images/dep5-br.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-        <div class="slide testi-slide"><img src="images/dep6-br.webp" alt="" width="700" height="1243" loading="lazy" aria-hidden="true"></div>
-      </div>
     </div>
   </div>
 </section>
